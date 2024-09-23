@@ -1,0 +1,30 @@
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.logo-wrapper span{
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-black);
+  font-size: var(--font-size-big);
+}
+
+.nav-links{
+  gap: 1.5rem;
+}
+
+.nav-link{
+  text-decoration: none;
+  color: var(--color-black);
+  font-size: var(--font-size-base);
+}

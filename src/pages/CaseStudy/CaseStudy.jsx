@@ -3,7 +3,9 @@ import './CaseStudy.css';
 
 function CaseStudy(){
   return(
-    <h1>CaseStudy</h1>
+    <main>
+      <h1>CaseStudy</h1>
+    </main>
   );
 }
 
