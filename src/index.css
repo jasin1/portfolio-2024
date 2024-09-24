@@ -5,10 +5,14 @@
   font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
 :root {
   --font-primary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-heading: 'Satoshi', sans-serif;
   --font-weight-black: 900;
+  --font-weight-medium: 520;
   --font-weight-regular: 400;
 
   /* Base font size */
@@ -31,6 +35,7 @@
   --color-dark-grey: #767676;
   --color-light-grey: #F7F7F7;
   --color-btn-border: #E7E5E2;
+  --color-btn-dark-border: #ACACAC;
 
   /* background-color: var(--color-background); */
 

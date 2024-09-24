@@ -1,0 +1,75 @@
+.btn{
+  padding: .75rem 2rem;
+  border: none;
+  /* color: var(--color-highlight); */
+  /* background-color: var(--color-white); */
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-black{
+  --btn-bg-color: var(--color-black);
+  --btn-text-color: var(--color-white);
+  --btn-border-color: transparent;
+}
+
+.btn-black:hover{
+  --btn-bg-color: var(--color-highlight);
+  --btn-text-color: var(--color-white);
+}
+
+.btn-white{
+  --btn-bg-color: var(--color-white);
+  --btn-text-color: var(--color-black);
+  --btn-border-color: var(--color-btn-border);
+  border: 1px solid var(--btn-border-color);
+}
+
+.btn-white:hover{
+  --btn-bg-color: var(--color-highlight);
+  --btn-text-color: var(--color-white);
+  --btn-border-color: var(--color-highlight);
+}
+
+/* orange-variation */
+.btn-white-orange{
+  --btn-bg-color: var(--color-white);
+  --btn-text-color: var(--color-highlight);
+  --btn-border-color: transparent;
+}
+
+.btn-white-orange:hover{
+  --btn-bg-color: var(--color-black);
+  --btn-text-color: var(--color-white);
+}
+
+
+
+.btn-outline{
+  --btn-bg-color: transparent;
+  --btn-text-color: var(--color-black);
+  --btn-border-color: var(--color-btn-dark-border);
+  border: 1px solid var(--btn-border-color);
+}
+
+.btn-outline:hover {
+  --btn-bg-color: var(--color-highlight);
+  --btn-text-color: var(--color-white);
+  --btn-border-color: var(--color-highlight);
+}
+
+.btn {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+}
+
+
