@@ -9,10 +9,18 @@
 }
 
 .project-thumbnail__image{
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .project-thumbnail.project-thumbnail.featured .project-thumbnail__image{
   width: 100%;
+}
+
+.img-wrapper{
+  background-color:red;
+}
+
+.project-thumbnail__content{
+  display: flex;
 }
 

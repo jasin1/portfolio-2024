@@ -20,7 +20,7 @@
   --font-size-big: 1.5rem;
 
   /* Headings */
-  --font-size-h1: 7.5rem;   /* 120px */
+  --font-size-h1: 6.5rem;   /* 120px */
   --font-size-h2: 3.5rem;   /* 56px */
   --font-size-h3: 2.916rem; /* 46.67px (following the 1.2 ratio) */
   --font-size-h4: 2.43rem;  /* 38.88px (1.2 * 32.4px) */
@@ -47,6 +47,13 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 html, body {
   height: 100%;
   font-family: var(--font-primary);
@@ -65,6 +72,7 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-black);
+  line-height: 1.2;
 }
 
 h1{
