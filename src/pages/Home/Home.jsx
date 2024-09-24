@@ -13,7 +13,7 @@ function Home() {
           variant="black"
           type="button"
           hasArrow={true}
-          >Let's Talk</Button>
+          >Let&apos;s Talk</Button>
         </div>
       </article>
     </main>

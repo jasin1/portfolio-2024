@@ -72,4 +72,11 @@
   color: var(--btn-text-color);
 }
 
+.btn-default{
+  --btn-bg-color: var(--color-gray);
+  --btn-text-color: var(--color-black);
+  --btn-border-color: var(--color-btn-border);
+  border: 1px solid var(--btn-border-color);
+}
+
 

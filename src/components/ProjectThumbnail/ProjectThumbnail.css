@@ -1,0 +1,18 @@
+.project-thumbnail{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.project-thumbnail.featured{
+  flex-direction: column;
+}
+
+.project-thumbnail__image{
+  max-width: 50%;
+}
+
+.project-thumbnail.project-thumbnail.featured .project-thumbnail__image{
+  width: 100%;
+}
+
