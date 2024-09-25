@@ -10,8 +10,19 @@ function Home() {
     title: "Garden Genius",
     description:
       "Mi a pellentesque proin laoreet risus vulputate quam erat in. Eget orci ullamcorper ut nunc a eget lacus cum. Ac vivamus viverra aliquam duis eu lectus dapibus pulvinar vitae. Pellentesque auctor odio quis venenatis feugiat blandit tortor. Integer purus amet elit odio pharetra commodo. Magnis pharetra odio volutpat",
-    buttons: [{ text: "view Details", variant:"white" }, { text: "GitHub" }],
+    buttons: [{ text: "view Details", variant: "white" }, { text: "GitHub" }],
     isFeatured: true,
+    tags: ["React", "Design", "Branding", "UI/UX"],
+  };
+
+  const thumbnailData2 = {
+    image: placeHolderImg,
+    title: "Garden Genius",
+    description:
+      "Mi a pellentesque proin laoreet risus vulputate quam erat in. Eget orci ullamcorper ut nunc a eget lacus cum. Ac vivamus viverra aliquam duis eu lectus dapibus pulvinar vitae. Pellentesque auctor odio quis venenatis feugiat blandit tortor. Integer purus amet elit odio pharetra commodo. Magnis pharetra odio volutpat",
+    buttons: [{ text: "view Details", variant: "white" }, { text: "GitHub" }],
+    isFeatured: false,
+    tags: ["React", "Design", "Branding", "UI/UX"],
   };
 
   return (
@@ -19,22 +30,42 @@ function Home() {
       <article>
         <div className="container">
           <Header />
-          <h1>
-            Crafting Code,<br/> 
-            <span className="Header-span">Designing Experiences</span>
-          </h1>
-          <Button variant="black" type="button" hasArrow={true}>
-            Let&apos;s Talk
-          </Button>
-          <div className="section">
+          <section className="hero">
+            <h1>
+              Crafting Code,
+              <br />
+              <span className="Header-span">Designing Experiences</span>
+            </h1>
+            <Button variant="black" type="button" hasArrow={true}>
+              Let&apos;s Talk
+            </Button>
+          </section>
+          <section>
+            <div className="indication-wrapper">
+              <h6>Featured work</h6>
+            </div>
             <ThumbNail
               image={thumbnailData.image}
               title={thumbnailData.title}
               description={thumbnailData.description}
               buttons={thumbnailData.buttons}
               isFeatured={thumbnailData.isFeatured}
+              tags={thumbnailData.tags}
             ></ThumbNail>
-          </div>
+          </section>
+          <section>
+          <div className="indication-wrapper">
+              <h6>Selected work</h6>
+            </div>
+            <ThumbNail
+              image={thumbnailData2.image}
+              title={thumbnailData2.title}
+              description={thumbnailData2.description}
+              buttons={thumbnailData2.buttons}
+              isFeatured={thumbnailData2.isFeatured}
+              tags={thumbnailData2.tags}
+            ></ThumbNail>
+          </section>
         </div>
       </article>
     </main>
