@@ -36,6 +36,10 @@ function Home() {
               <br />
               <span className="Header-span">Designing Experiences</span>
             </h1>
+            <p className="Header-sub">
+              Combining development expertise with design finesse for intuitive,
+              beautiful web solutions.
+            </p>
             <Button variant="black" type="button" hasArrow={true}>
               Let&apos;s Talk
             </Button>
@@ -53,8 +57,27 @@ function Home() {
               tags={thumbnailData.tags}
             ></ThumbNail>
           </section>
+          <section className="section-border">
+            <div className="section-content">
+              <h2>About Me</h2>
+              <div className="content-wrapper-small">
+                <p className="Header-sub">
+                  As a digital designer and art director I help companies and
+                  organisations around the world connect with their audience and
+                  grow their business. Projects can be done directly with
+                  clients or in a supporting role for agencies and studios from
+                  around the world
+                </p>
+                <div className="button-wrapper">
+                  <Button variant="white" type="button" hasArrow={true}>
+                    Read More
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
           <section>
-          <div className="indication-wrapper">
+            <div className="indication-wrapper">
               <h6>Selected work</h6>
             </div>
             <ThumbNail
