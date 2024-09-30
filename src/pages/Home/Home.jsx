@@ -2,6 +2,8 @@ import "./Home.css";
 import Header from "../../components/Header/Header.jsx";
 import Button from "../../components/Button/Button.jsx";
 import ThumbNail from "../../components/ProjectThumbnail/ProjectThumbnail.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
+import CallToAction from "../../components/CallToAction/CallToAction.jsx";
 import placeHolderImg from "../../assets/placeHolderImg.jpg";
 
 function Home() {
@@ -90,6 +92,8 @@ function Home() {
             ></ThumbNail>
           </section>
         </div>
+        <CallToAction></CallToAction>
+        <Footer></Footer>
       </article>
     </main>
   );
