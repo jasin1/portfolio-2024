@@ -162,6 +162,10 @@ li{
   padding-bottom: 3rem;
 }
 
+.hero-secondPage{
+  margin: 3rem 0;
+}
+
 
 
 .Header-sub{
@@ -185,4 +189,17 @@ li{
 .divider-white{
   background-color: var(--color-white-transparent);
   margin-bottom: 40px;
+}
+
+.button-wrapper{
+  display: flex;
+  gap: 1rem;
+}
+
+.quote{
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h4);
+  font-weight: var( --font-weight-medium);
+  color: var(--color-dark-grey);
+  line-height: 1.3;
 }

@@ -9,7 +9,7 @@ function CallToAction() {
         <div className="divider divider-white"></div>
         <div className="btn-wrapper">
           <div className="btn-pair">
-            <Button variant="outline-white">hi@jasinidrissi.com</Button>
+            <Button variant="outline-white">jasin.tairaidrissi@gmail.com</Button>
             <Button variant="outline-white">+31 (0)6 46 237 292</Button>
           </div>
           <Button
