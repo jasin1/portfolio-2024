@@ -39,8 +39,7 @@ function Home() {
               <span className="Header-span">Designing Experiences</span>
             </h1>
             <p className="Header-sub">
-              Combining development expertise with design finesse for intuitive,
-              beautiful web solutions.
+              I am a frontend developer who leverages design expertise to create seamless, user-friendly web experiences.
             </p>
             <Button variant="black" type="button" hasArrow={true}>
               Let&apos;s Talk

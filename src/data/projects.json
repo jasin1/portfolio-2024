@@ -1,0 +1,101 @@
+
+[
+  {
+    "slug": "garden-genius",
+    "title": "Garden Genius",
+    "description": "A description for this project",
+    "subText":"Sub text for this project meant for the project page",
+    "isFeatured": true,
+    "projectType":"detailed",
+    "tags": ["React", "Design", "Branding", "UI/UX"],
+    "thumbnail": "/assets/placeholderImg.jpg",
+    "linkProjectPage":"projects/project-title",
+    "githubURL":"https://github.com/jasin1/novi-eindopdracht-gardenGenius",
+    "liveSiteURL":"",
+    "role":"Frontend Developer",
+    "date":"Juli 2024",
+    "content":{
+      "longDescription":"A detailed explanation of Project 1, covering more information for the project page.",
+      "images":[
+        {
+          "url":"/assets/placeholderImg.jpg",
+          "altText":"Screenshot of project"
+        },
+        {
+          "url":"/assets/placeholderImg.jpg",
+          "altText":"Screenshot of project"
+        },
+        {
+          "url":"/assets/placeholderImg.jpg",
+          "altText":"Screenshot of project"
+        }
+    
+      ],
+      "challenges": "Faced difficulty with optimizing API response times, which was resolved by implementing caching.",
+      "lessonsLearned": "Improved understanding of React hooks for state management.",
+      "additionalInfo":"Additional info to explain what is going on here"
+    }
+  },
+  {
+    "slug": "budlr-project",
+    "title": "Budlr",
+    "description": "A description for this project",
+    "subText":"Sub text for this project meant for the project page",
+    "isFeatured": false,
+    "projectType":"normal",
+    "tags": ["Webflow", "Design"],
+    "thumbnail": "/assets/placeholderImg.jpg",
+    "linkProjectPage":"projects/project-title",
+    "githubURL":"",
+    "liveSiteURL":"https://www.budlr.nl/",
+    "role":"Frontend Developer",
+    "date":"Juli 2024",
+    "content":{
+      "longDescription":"A detailed explanation of Project 1, covering more information for the project page.",
+      "images":[
+        {
+          "url":"/assets/placeholderImg.jpg",
+          "altText":"Screenshot of project"
+        },
+        {
+          "url":"/assets/placeholderImg.jpg",
+          "altText":"Screenshot of project"
+        }   
+      ],
+      "challenges": "Faced difficulty with optimizing API response times, which was resolved by implementing caching.",
+      "lessonsLearned": "Improved understanding of React hooks for state management.",
+      "additionalInfo":"Additional info to explain what is going on here"
+    }
+  },
+  {
+    "slug": "bikeshop-west",
+    "title": "Bikeshop West",
+    "description": "A description for this project",
+    "subText":"Sub text for this project meant for the project page",
+    "isFeatured": false,
+    "projectType":"normal",
+    "tags": ["Webflow","Javascript", "Design"],
+    "thumbnail": "/assets/placeholderImg.jpg",
+    "linkProjectPage":"projects/project-title",
+    "githubURL":"",
+    "liveSiteURL":"https://www.bikeshopwest.nl/",
+    "role":"Frontend Developer",
+    "date":"Juli 2024",
+    "content":{
+      "longDescription":"A detailed explanation of Project 1, covering more information for the project page.",
+      "images":[
+        {
+          "url":"/assets/placeholderImg.jpg",
+          "altText":"Screenshot of project"
+        },
+        {
+          "url":"/assets/placeholderImg.jpg",
+          "altText":"Screenshot of project"
+        }   
+      ],
+      "challenges": "Faced difficulty with optimizing API response times, which was resolved by implementing caching.",
+      "lessonsLearned": "Improved understanding of React hooks for state management.",
+      "additionalInfo":"Additional info to explain what is going on here"
+    }
+  }
+]
