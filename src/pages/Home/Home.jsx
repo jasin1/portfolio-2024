@@ -4,34 +4,36 @@ import Button from "../../components/Button/Button.jsx";
 import ThumbNail from "../../components/ProjectThumbnail/ProjectThumbnail.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import CallToAction from "../../components/CallToAction/CallToAction.jsx";
-import placeHolderImg from "../../assets/placeHolderImg.jpg";
+// import placeHolderImg from "../../assets/placeHolderImg.jpg";
+import projectsData from "../../data/projects.json";
+import {getImagePath} from "../../helpers/imageHelpers.js";
 
 function Home() {
-  const thumbnailData = {
-    image: placeHolderImg,
-    title: "Garden Genius",
-    description:
-      "Mi a pellentesque proin laoreet risus vulputate quam erat in. Eget orci ullamcorper ut nunc a eget lacus cum. Ac vivamus viverra aliquam duis eu lectus dapibus pulvinar vitae. Pellentesque auctor odio quis venenatis feugiat blandit tortor. Integer purus amet elit odio pharetra commodo. Magnis pharetra odio volutpat",
-    buttons: [{ text: "view Details", variant: "white" }, { text: "GitHub" }],
-    isFeatured: true,
-    tags: ["React", "Design", "Branding", "UI/UX"],
-  };
 
-  const thumbnailData2 = {
-    image: placeHolderImg,
-    title: "Garden Genius",
-    description:
-      "Mi a pellentesque proin laoreet risus vulputate quam erat in. Eget orci ullamcorper ut nunc a eget lacus cum. Ac vivamus viverra aliquam duis eu lectus dapibus pulvinar vitae. Pellentesque auctor odio quis venenatis feugiat blandit tortor. Integer purus amet elit odio pharetra commodo. Magnis pharetra odio volutpat",
-    buttons: [{ text: "view Details", variant: "white" }, { text: "GitHub" }],
-    isFeatured: false,
-    tags: ["React", "Design", "Branding", "UI/UX"],
-  };
+  
+
+  const featuredProjects = projectsData.filter((project) => project.isFeatured);
+  const normalProjects = projectsData.filter((project) => !project.isFeatured);
+
+
+
+  // const thumbnailData2 = {
+  //   image: placeHolderImg,
+  //   title: "Garden Genius",
+  //   description:
+  //     "Mi a pellentesque proin laoreet risus vulputate quam erat in. Eget orci ullamcorper ut nunc a eget lacus cum. Ac vivamus viverra aliquam duis eu lectus dapibus pulvinar vitae. Pellentesque auctor odio quis venenatis feugiat blandit tortor. Integer purus amet elit odio pharetra commodo. Magnis pharetra odio volutpat",
+  //   buttons: [{ text: "view Details", variant: "white" }, { text: "GitHub" }],
+  //   isFeatured: false,
+  //   tags: ["React", "Design", "Branding", "UI/UX"],
+  // };
 
   return (
     <main>
       <article>
         <div className="container">
           <Header />
+
+          {/* Hero section */}
           <section className="hero">
             <h1>
               Crafting Code,
@@ -45,18 +47,36 @@ function Home() {
               Let&apos;s Talk
             </Button>
           </section>
+
+           {/* Featured work */}
+
           <section>
             <div className="indication-wrapper">
               <h6>Featured work</h6>
             </div>
-            <ThumbNail
+            {featuredProjects.map((project)=>(
+              console.log('my img is ', getImagePath(project.thumbnail)),
+              <ThumbNail 
+              key={project.slug}
+              image={getImagePath(project.thumbnail)}
+              title={project.title}
+              description={project.description}
+              buttons={[
+                { text: "view Details", variant: "white"},
+                project.githubURL ? {text: "GitHub", variant: "white", link: project.githubURL}:null,
+              ].filter(Boolean)}
+              isFeatured={project.isFeatured}
+              tags={project.tags}
+              />
+            ))}
+            {/* <ThumbNail
               image={thumbnailData.image}
               title={thumbnailData.title}
               description={thumbnailData.description}
               buttons={thumbnailData.buttons}
               isFeatured={thumbnailData.isFeatured}
               tags={thumbnailData.tags}
-            ></ThumbNail>
+            ></ThumbNail> */}
           </section>
           <section className="section-border">
             <div className="section-content">
@@ -81,14 +101,28 @@ function Home() {
             <div className="indication-wrapper">
               <h6>Selected work</h6>
             </div>
-            <ThumbNail
+            {normalProjects.map((project)=>(
+              <ThumbNail 
+              key={project.slug}
+              image={getImagePath(project.thumbnail)}
+              title={project.title}
+              description={project.description}
+              buttons={[
+                {text: "View Details", variant:"white"},
+                project.githubURL ? {text: "GitHub", variant: "white", link: project.githubURL} :null,
+              ].filter(Boolean)}
+              isFeatured={project.isFeatured}
+              tags={project.tags}
+              />
+            ))}
+            {/* <ThumbNail
               image={thumbnailData2.image}
               title={thumbnailData2.title}
               description={thumbnailData2.description}
               buttons={thumbnailData2.buttons}
               isFeatured={thumbnailData2.isFeatured}
               tags={thumbnailData2.tags}
-            ></ThumbNail>
+            ></ThumbNail> */}
           </section>
         </div>
         <CallToAction></CallToAction>

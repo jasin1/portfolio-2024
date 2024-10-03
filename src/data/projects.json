@@ -8,7 +8,7 @@
     "isFeatured": true,
     "projectType":"detailed",
     "tags": ["React", "Design", "Branding", "UI/UX"],
-    "thumbnail": "/assets/placeholderImg.jpg",
+    "thumbnail": "placeholderImg.jpg",
     "linkProjectPage":"projects/project-title",
     "githubURL":"https://github.com/jasin1/novi-eindopdracht-gardenGenius",
     "liveSiteURL":"",
@@ -18,15 +18,15 @@
       "longDescription":"A detailed explanation of Project 1, covering more information for the project page.",
       "images":[
         {
-          "url":"/assets/placeholderImg.jpg",
+          "url":"placeholderImg.jpg",
           "altText":"Screenshot of project"
         },
         {
-          "url":"/assets/placeholderImg.jpg",
+          "url":"placeholderImg.jpg",
           "altText":"Screenshot of project"
         },
         {
-          "url":"/assets/placeholderImg.jpg",
+          "url":"placeholderImg.jpg",
           "altText":"Screenshot of project"
         }
     
@@ -44,7 +44,7 @@
     "isFeatured": false,
     "projectType":"normal",
     "tags": ["Webflow", "Design"],
-    "thumbnail": "/assets/placeholderImg.jpg",
+    "thumbnail": "placeholderImg.jpg",
     "linkProjectPage":"projects/project-title",
     "githubURL":"",
     "liveSiteURL":"https://www.budlr.nl/",
@@ -54,11 +54,11 @@
       "longDescription":"A detailed explanation of Project 1, covering more information for the project page.",
       "images":[
         {
-          "url":"/assets/placeholderImg.jpg",
+          "url":"placeholderImg.jpg",
           "altText":"Screenshot of project"
         },
         {
-          "url":"/assets/placeholderImg.jpg",
+          "url":"placeholderImg.jpg",
           "altText":"Screenshot of project"
         }   
       ],
@@ -75,7 +75,7 @@
     "isFeatured": false,
     "projectType":"normal",
     "tags": ["Webflow","Javascript", "Design"],
-    "thumbnail": "/assets/placeholderImg.jpg",
+    "thumbnail": "placeholderImg.jpg",
     "linkProjectPage":"projects/project-title",
     "githubURL":"",
     "liveSiteURL":"https://www.bikeshopwest.nl/",
@@ -85,11 +85,11 @@
       "longDescription":"A detailed explanation of Project 1, covering more information for the project page.",
       "images":[
         {
-          "url":"/assets/placeholderImg.jpg",
+          "url":"placeholderImg.jpg",
           "altText":"Screenshot of project"
         },
         {
-          "url":"/assets/placeholderImg.jpg",
+          "url":"placeholderImg.jpg",
           "altText":"Screenshot of project"
         }   
       ],
