@@ -16,17 +16,6 @@ function Home() {
   const normalProjects = projectsData.filter((project) => !project.isFeatured);
 
 
-
-  // const thumbnailData2 = {
-  //   image: placeHolderImg,
-  //   title: "Garden Genius",
-  //   description:
-  //     "Mi a pellentesque proin laoreet risus vulputate quam erat in. Eget orci ullamcorper ut nunc a eget lacus cum. Ac vivamus viverra aliquam duis eu lectus dapibus pulvinar vitae. Pellentesque auctor odio quis venenatis feugiat blandit tortor. Integer purus amet elit odio pharetra commodo. Magnis pharetra odio volutpat",
-  //   buttons: [{ text: "view Details", variant: "white" }, { text: "GitHub" }],
-  //   isFeatured: false,
-  //   tags: ["React", "Design", "Branding", "UI/UX"],
-  // };
-
   return (
     <main>
       <article>
@@ -55,7 +44,6 @@ function Home() {
               <h6>Featured work</h6>
             </div>
             {featuredProjects.map((project)=>(
-              console.log('my img is ', getImagePath(project.thumbnail)),
               <ThumbNail 
               key={project.slug}
               image={getImagePath(project.thumbnail)}
@@ -63,20 +51,12 @@ function Home() {
               description={project.description}
               buttons={[
                 { text: "view Details", variant: "white"},
-                project.githubURL ? {text: "GitHub", variant: "white", link: project.githubURL}:null,
+                project.githubURL ? {text: "GitHub", variant: "white", href: project.githubURL}:null,
               ].filter(Boolean)}
               isFeatured={project.isFeatured}
               tags={project.tags}
               />
             ))}
-            {/* <ThumbNail
-              image={thumbnailData.image}
-              title={thumbnailData.title}
-              description={thumbnailData.description}
-              buttons={thumbnailData.buttons}
-              isFeatured={thumbnailData.isFeatured}
-              tags={thumbnailData.tags}
-            ></ThumbNail> */}
           </section>
           <section className="section-border">
             <div className="section-content">
@@ -109,20 +89,12 @@ function Home() {
               description={project.description}
               buttons={[
                 {text: "View Details", variant:"white"},
-                project.githubURL ? {text: "GitHub", variant: "white", link: project.githubURL} :null,
+                project.githubURL ? {text: "GitHub", variant: "white", href: project.githubURL} :null,
               ].filter(Boolean)}
               isFeatured={project.isFeatured}
               tags={project.tags}
               />
             ))}
-            {/* <ThumbNail
-              image={thumbnailData2.image}
-              title={thumbnailData2.title}
-              description={thumbnailData2.description}
-              buttons={thumbnailData2.buttons}
-              isFeatured={thumbnailData2.isFeatured}
-              tags={thumbnailData2.tags}
-            ></ThumbNail> */}
           </section>
         </div>
         <CallToAction></CallToAction>

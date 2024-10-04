@@ -159,6 +159,12 @@ li{
   padding: 1.5rem 2.5rem;
 }
 
+.sub-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .hero{
   margin: 3rem 0;
   padding-bottom: 3rem;
@@ -204,4 +210,16 @@ li{
   font-weight: var( --font-weight-medium);
   color: var(--color-dark-grey);
   line-height: 1.3;
+}
+
+.img-wrapper{
+  background-color:red;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.img-wrapper img{
+  width: 100%;
+  height: auto;
+  display: block;
 }

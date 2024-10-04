@@ -31,6 +31,7 @@ function ProjectThumbnail({
               <Button
                 key={index}
                 onClick={button.onClick}
+                href={button.href || undefined}
                 variant={button.variant || "default"}
                 type={button.type || "button"}
                 hasArrow={true}

@@ -1,13 +1,13 @@
 /* Thumb global styling */
-.img-wrapper{
-  background-color:red;
-  border-radius: 1.5rem;
-  overflow: hidden;
-}
+
 
 .tag-wrapper{
   display: flex;
   gap: .5rem;
+}
+
+.project-thumbnail{
+  margin-bottom: 1.5rem;
 }
 
 .project-thumbnail__image{
