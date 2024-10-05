@@ -1,12 +1,13 @@
 import "./Button.css";
 
-function Button({ children, onClick, type, variant, hasArrow, href }) {
+function Button({ children, onClick, type, variant, hasArrow, href, linkType }) {
   console.log('button href: ', href);
   const Component = href ? "a" : "button";
 
   return (
     <Component className={`btn btn-${variant}`} onClick={onClick} href={href} type={href ? undefined : type} // only apply `type` to buttons
     target={href ? '_blank': undefined}
+    linkType={linkType}
     >
       {children}
       {hasArrow && (

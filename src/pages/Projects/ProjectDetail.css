@@ -1,0 +1,13 @@
+.content-block{
+  margin-bottom: 4rem;
+}
+
+.empty-block{
+  display: block;
+}
+
+.text-block{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}

@@ -50,8 +50,18 @@ function Home() {
               title={project.title}
               description={project.description}
               buttons={[
-                { text: "view Details", variant: "white"},
-                project.githubURL ? {text: "GitHub", variant: "white", href: project.githubURL}:null,
+                {
+                  text:"View Details",
+                  variant:"white",
+                  href:`/projects/${project.slug}`,
+                  linkType: "internal"
+                },
+                project.githubURL ? {
+                  text: "GitHub",
+                  variant: "white",
+                  href: project.githubURL,
+                  linkType: "external"
+                } : null,           
               ].filter(Boolean)}
               isFeatured={project.isFeatured}
               tags={project.tags}
@@ -88,8 +98,12 @@ function Home() {
               title={project.title}
               description={project.description}
               buttons={[
-                {text: "View Details", variant:"white"},
-                project.githubURL ? {text: "GitHub", variant: "white", href: project.githubURL} :null,
+                {
+                  text:"View Details",
+                  variant:"white",
+                  href:`/projects/${project.slug}`,
+                  linkType: "internal"
+                }         
               ].filter(Boolean)}
               isFeatured={project.isFeatured}
               tags={project.tags}

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./ProjectThumbnail.css";
 import Button from "../Button/Button.jsx";
 import Tag from "../Tag/Tag.jsx";
@@ -10,6 +11,9 @@ function ProjectThumbnail({
   isFeatured,
   tags = [],
 }) {
+  const navigate = useNavigate();
+
+
   return (
     <div className={`project-thumbnail ${isFeatured ? "featured" : ""}`}>
       <div className="img-wrapper">
@@ -19,9 +23,8 @@ function ProjectThumbnail({
         <div className="title-wrapper">
           <h3 className="project-thumbnail__title">{title}</h3>
           <div className="tag-wrapper">
-            {tags.length > 0 && tags.map((tag, index)=>(
-              <Tag key={index} name={tag}></Tag>
-            ))}
+            {tags.length > 0 &&
+              tags.map((tag, index) => <Tag key={index} name={tag}></Tag>)}
           </div>
         </div>
         <div className="project-thumbnail__text">
@@ -30,8 +33,11 @@ function ProjectThumbnail({
             {buttons.map((button, index) => (
               <Button
                 key={index}
-                onClick={button.onClick}
-                href={button.href || undefined}
+                onClick={
+                  button.linkType === "internal"
+                  ? () => navigate(button.href) : undefined
+                }
+                href={button.linkType === "external" ? button.href : undefined}
                 variant={button.variant || "default"}
                 type={button.type || "button"}
                 hasArrow={true}
