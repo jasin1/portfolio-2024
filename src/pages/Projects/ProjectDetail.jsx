@@ -8,14 +8,14 @@ import PlaceHolderImg from "../../assets/placeHolderImg.jpg";
 import Tag from "../../components/Tag/Tag.jsx";
 import Button from "../../components/Button/Button.jsx";
 
+
 function ProjectDetail() {
-  const {slug} = useParams();
+  const { slug } = useParams();
   const project = projectsData.find((proj) => proj.slug === slug);
 
-  if (!project){
-    return <div>Project not found!</div>
+  if (!project) {
+    return <div>Project not found!</div>;
   }
-
 
   return (
     <main>
@@ -25,10 +25,16 @@ function ProjectDetail() {
           <section className="hero-secondPage">
             <h1>{project.title}</h1>
             <div className="sub-container">
-              <Tag name="React"></Tag>
-              <Button variant="white" type="button" hasArrow={true}>
-                External Link
+              <div className="tag-wrapper">
+                {project.tags.map((tag, index) => (
+                  <Tag key={index} name={tag}></Tag>
+                ))}
+              </div>
+              <Button variant="white" type="button" hasArrow={true} href={project.githubURL}>
+                GitHub repo
               </Button>
+              
+              
             </div>
           </section>
           <section>
@@ -68,8 +74,8 @@ function ProjectDetail() {
               </div>
             </div>
             <div className="img-wrapper">
-                <img src={PlaceHolderImg} alt="" />
-              </div>
+              <img src={PlaceHolderImg} alt="" />
+            </div>
           </section>
         </div>
         <CallToAction />

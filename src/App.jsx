@@ -7,8 +7,10 @@ import Projects from "./pages/Projects/Projects.jsx";
 import CaseStudy from "./pages/CaseStudy/CaseStudy.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import ProjectDetail from "./pages/Projects/ProjectDetail.jsx";
+import useScrollToTop from "./hooks/useScrollToTop.js";
 
 function App() {
+  useScrollToTop();
   return (
     <>
       <Routes>
