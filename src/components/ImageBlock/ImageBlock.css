@@ -1,0 +1,18 @@
+.img-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-wrapper .image-full{
+  width: 100%;
+}
+
+.img-wrapper .image-pair{
+  justify-content: space-between;
+}
+
+.img-wrapper img {
+  flex: 1;
+  height: auto;
+  border-radius: .5rem;
+}

@@ -4,10 +4,13 @@ import projectsData from "../../data/projects.json";
 import Header from "../../components/Header/Header.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import CallToAction from "../../components/CallToAction/CallToAction.jsx";
-import PlaceHolderImg from "../../assets/placeHolderImg.jpg";
+// import PlaceHolderImg from "../../assets/placeHolderImg.jpg";
 import Tag from "../../components/Tag/Tag.jsx";
 import Button from "../../components/Button/Button.jsx";
-
+import {getImagePath} from "../../helpers/imageHelpers.js";
+import TextBlock from "../../components/TextBlock/TextBlock.jsx";
+import ImageBlock from "../../components/ImageBlock/ImageBlock.jsx";
+import QuoteBlock from "../../components/QuoteBlock/QuoteBlock.jsx";
 
 function ProjectDetail() {
   const { slug } = useParams();
@@ -16,6 +19,12 @@ function ProjectDetail() {
   if (!project) {
     return <div>Project not found!</div>;
   }
+
+  const componentMap = {
+    text: TextBlock,
+    quote: QuoteBlock,
+    images: ImageBlock,
+  };
 
   return (
     <main>
@@ -30,17 +39,38 @@ function ProjectDetail() {
                   <Tag key={index} name={tag}></Tag>
                 ))}
               </div>
-              <Button variant="white" type="button" hasArrow={true} href={project.githubURL}>
+              <Button
+                variant="white"
+                type="button"
+                hasArrow={true}
+                href={project.githubURL}
+              >
                 GitHub repo
               </Button>
-              
-              
             </div>
           </section>
           <section>
+          <div className="img-wrapper">
+                <img src={getImagePath(project.thumbnail)} alt="" />
+              </div>
+            <div className="content-wrapper">
+              {project.contentBlock.map((block, index) => {
+                const BlockComponent = componentMap[block.type];
+                return (
+                  <div key={index} className="content-block">
+                    {BlockComponent && (
+                      <BlockComponent content={block.content} />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* <section>
             <div className="content-wrapper">
               <div className="img-wrapper">
-                <img src={PlaceHolderImg} alt="" />
+                <img src={getImagePath(project.thumbnail)} alt="" />
               </div>
               <div className="content-block">
                 <p className="quote-large">
@@ -76,7 +106,7 @@ function ProjectDetail() {
             <div className="img-wrapper">
               <img src={PlaceHolderImg} alt="" />
             </div>
-          </section>
+          </section> */}
         </div>
         <CallToAction />
         <Footer></Footer>

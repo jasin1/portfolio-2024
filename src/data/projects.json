@@ -1,101 +1,116 @@
-
 [
   {
     "slug": "garden-genius",
     "title": "Garden Genius",
     "description": "A description for this project",
-    "subText":"Sub text for this project meant for the project page",
+    "subText": "Sub text for this project meant for the project page",
     "isFeatured": true,
-    "projectType":"detailed",
+    "projectType": "detailed",
     "tags": ["React", "Design", "Branding", "UI/UX"],
     "thumbnail": "placeholderImg.jpg",
-    "linkProjectPage":"projects/project-title",
-    "githubURL":"https://github.com/jasin1/novi-eindopdracht-gardenGenius",
-    "liveSiteURL":"",
-    "role":"Frontend Developer",
-    "date":"Juli 2024",
-    "content":{
-      "longDescription":"A detailed explanation of Project 1, covering more information for the project page.",
-      "images":[
-        {
-          "url":"placeholderImg.jpg",
-          "altText":"Screenshot of project"
-        },
-        {
-          "url":"placeholderImg.jpg",
-          "altText":"Screenshot of project"
-        },
-        {
-          "url":"placeholderImg.jpg",
-          "altText":"Screenshot of project"
-        }
-    
-      ],
-      "challenges": "Faced difficulty with optimizing API response times, which was resolved by implementing caching.",
-      "lessonsLearned": "Improved understanding of React hooks for state management.",
-      "additionalInfo":"Additional info to explain what is going on here"
-    }
+    "linkProjectPage": "projects/project-title",
+    "githubURL": "https://github.com/jasin1/novi-eindopdracht-gardenGenius",
+    "liveSiteURL": "",
+    "role": "Frontend Developer",
+    "date": "Juli 2024",
+    "contentBlock": [
+      {
+        "type": "quote",
+        "content": "This is a text block explaining my Garden-Genius project."
+      },
+      {
+        "type": "text",
+        "content": "This is a text block explaining my Garden-Genius project."
+      },
+      {
+        "type": "images",
+        "content": [
+          {
+            "src": "placeholderImg.jpg",
+            "alt": "Image description"
+          },
+          {
+            "src": "placeholderImg.jpg",
+            "alt": "Image description"
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "budlr-project",
     "title": "Budlr",
     "description": "A description for this project",
-    "subText":"Sub text for this project meant for the project page",
+    "subText": "Sub text for this project meant for the project page",
     "isFeatured": false,
-    "projectType":"normal",
+    "projectType": "normal",
     "tags": ["Webflow", "Design"],
     "thumbnail": "placeholderImg.jpg",
-    "linkProjectPage":"projects/project-title",
-    "githubURL":"",
-    "liveSiteURL":"https://www.budlr.nl/",
-    "role":"Frontend Developer",
-    "date":"Juli 2024",
-    "content":{
-      "longDescription":"A detailed explanation of Project 1, covering more information for the project page.",
-      "images":[
-        {
-          "url":"placeholderImg.jpg",
-          "altText":"Screenshot of project"
-        },
-        {
-          "url":"placeholderImg.jpg",
-          "altText":"Screenshot of project"
-        }   
-      ],
-      "challenges": "Faced difficulty with optimizing API response times, which was resolved by implementing caching.",
-      "lessonsLearned": "Improved understanding of React hooks for state management.",
-      "additionalInfo":"Additional info to explain what is going on here"
-    }
+    "linkProjectPage": "projects/project-title",
+    "githubURL": "",
+    "liveSiteURL": "https://www.budlr.nl/",
+    "role": "Frontend Developer",
+    "date": "Juli 2024",
+    "contentBlock": [
+      {
+        "type": "quote",
+        "content": "This is a text block explaining my Budlr project."
+      },
+      {
+        "type": "text",
+        "content": "This is a text block explaining my Budlr project."
+      },
+      {
+        "type": "images",
+        "content": [
+          {
+            "src": "placeholderImg.jpg",
+            "alt": "Image description"
+          },
+          {
+            "src": "placeholderImg.jpg",
+            "alt": "Image description"
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "bikeshop-west",
     "title": "Bikeshop West",
     "description": "A description for this project",
-    "subText":"Sub text for this project meant for the project page",
+    "subText": "Sub text for this project meant for the project page",
     "isFeatured": false,
-    "projectType":"normal",
-    "tags": ["Webflow","Javascript", "Design"],
+    "projectType": "normal",
+    "tags": ["Webflow", "Javascript", "Design"],
     "thumbnail": "placeholderImg.jpg",
-    "linkProjectPage":"projects/project-title",
-    "githubURL":"",
-    "liveSiteURL":"https://www.bikeshopwest.nl/",
-    "role":"Frontend Developer",
-    "date":"Juli 2024",
-    "content":{
-      "longDescription":"A detailed explanation of Project 1, covering more information for the project page.",
-      "images":[
-        {
-          "url":"placeholderImg.jpg",
-          "altText":"Screenshot of project"
-        },
-        {
-          "url":"placeholderImg.jpg",
-          "altText":"Screenshot of project"
-        }   
-      ],
-      "challenges": "Faced difficulty with optimizing API response times, which was resolved by implementing caching.",
-      "lessonsLearned": "Improved understanding of React hooks for state management.",
-      "additionalInfo":"Additional info to explain what is going on here"
-    }
+    "linkProjectPage": "projects/project-title",
+    "githubURL": "",
+    "liveSiteURL": "https://www.bikeshopwest.nl/",
+    "role": "Frontend Developer",
+    "date": "Juli 2024",
+    "contentBlock": [
+      {
+        "type": "quote",
+        "content": "This is a text block explaining my BikeShop project."
+      },
+      {
+        "type": "text",
+        "content": "This is a text block explaining my BikeShop project."
+      },
+      {
+        "type": "images",
+        "content": [
+          {
+            "src": "placeholderImg.jpg",
+            "alt": "Image description"
+          },
+          {
+            "src": "placeholderImg.jpg",
+            "alt": "Image description"
+          }
+        ]
+      }
+    ]
   }
 ]
