@@ -1,18 +1,17 @@
-.img-wrapper{
-  display: flex;
-  flex-wrap: wrap;
+
+.image-grid{
+  display: grid;
 }
 
-.img-wrapper .image-full{
-  width: 100%;
+
+.image-full{
+  grid-template-columns: 1fr;
 }
 
-.img-wrapper .image-pair{
-  justify-content: space-between;
+.image-pair{
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
-.img-wrapper img {
-  flex: 1;
-  height: auto;
-  border-radius: .5rem;
-}
+
+

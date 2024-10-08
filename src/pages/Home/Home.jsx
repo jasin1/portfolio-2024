@@ -32,7 +32,7 @@ function Home() {
             <p className="Header-sub">
               I am a frontend developer who leverages design expertise to create seamless, user-friendly web experiences.
             </p>
-            <Button variant="black" type="button" hasArrow={true}>
+            <Button variant="black" type="button" hasArrow={true} href="/Contact">
               Let&apos;s Talk
             </Button>
           </section>
@@ -80,7 +80,7 @@ function Home() {
                   around the world
                 </p>
                 <div className="button-wrapper">
-                  <Button variant="white" type="button" hasArrow={true}>
+                  <Button variant="white" type="button" hasArrow={true} href="/About">
                     Read More
                   </Button>
                 </div>

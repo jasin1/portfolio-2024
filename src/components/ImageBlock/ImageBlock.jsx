@@ -4,9 +4,11 @@ import { getImagePath } from "../../helpers/imageHelpers";
 function ImageBlock ({ content }){
   const layoutClass = content.length > 1 ? 'image-pair' : 'image-full';
   return(
-    <div className={`img-wrapper ${layoutClass}`}>
+    <div className={`image-grid ${layoutClass}`}>
       {content.map((image, index)=>(
-        <img key={index} src={getImagePath(image.src)} alt={image.alt}/>
+        <div key={index} className="img-wrapper">
+          <img src={getImagePath(image.src)} alt={image.alt}/>
+        </div>
       ))}
     </div>
   );

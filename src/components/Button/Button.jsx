@@ -1,13 +1,20 @@
 import "./Button.css";
+import { Link } from "react-router-dom";
 
-function Button({ children, onClick, type, variant, hasArrow, href, linkType }) {
-  console.log('button href: ', href);
-  const Component = href ? "a" : "button";
+function Button({ children, onClick, type, variant, hasArrow, href }) {
+
+  const isExternal = href && href.startsWith("http");
+  const Component = isExternal ? "a" : href ? Link : "button";
 
   return (
-    <Component className={`btn btn-${variant}`} onClick={onClick} href={href} type={href ? undefined : type} // only apply `type` to buttons
-    target={href ? '_blank': undefined}
-    linkType={linkType}
+    <Component className={`btn btn-${variant}`} 
+    onClick={onClick} 
+    to={!isExternal ? href : undefined}
+    href={isExternal ? href : undefined} 
+    type={!isExternal ? type :undefined} 
+    target={isExternal ? '_blank': undefined}
+    rel={isExternal ? "noopener noreferrer" : undefined}
+    
     >
       {children}
       {hasArrow && (

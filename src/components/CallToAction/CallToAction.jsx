@@ -14,7 +14,8 @@ function CallToAction() {
           </div>
           <Button
           variant="white-orange"
-          hasArrow={true} 
+          hasArrow={true}
+          href="/Contact" 
           >Get in Touch</Button>
         </div>
       </div>

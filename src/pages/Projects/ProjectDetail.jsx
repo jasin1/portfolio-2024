@@ -7,7 +7,7 @@ import CallToAction from "../../components/CallToAction/CallToAction.jsx";
 // import PlaceHolderImg from "../../assets/placeHolderImg.jpg";
 import Tag from "../../components/Tag/Tag.jsx";
 import Button from "../../components/Button/Button.jsx";
-import {getImagePath} from "../../helpers/imageHelpers.js";
+import { getImagePath } from "../../helpers/imageHelpers.js";
 import TextBlock from "../../components/TextBlock/TextBlock.jsx";
 import ImageBlock from "../../components/ImageBlock/ImageBlock.jsx";
 import QuoteBlock from "../../components/QuoteBlock/QuoteBlock.jsx";
@@ -50,9 +50,9 @@ function ProjectDetail() {
             </div>
           </section>
           <section>
-          <div className="img-wrapper">
-                <img src={getImagePath(project.thumbnail)} alt="" />
-              </div>
+            <div className="img-wrapper">
+              <img src={getImagePath(project.thumbnail)} alt="" />
+            </div>
             <div className="content-wrapper">
               {project.contentBlock.map((block, index) => {
                 const BlockComponent = componentMap[block.type];
@@ -66,47 +66,6 @@ function ProjectDetail() {
               })}
             </div>
           </section>
-
-          {/* <section>
-            <div className="content-wrapper">
-              <div className="img-wrapper">
-                <img src={getImagePath(project.thumbnail)} alt="" />
-              </div>
-              <div className="content-block">
-                <p className="quote-large">
-                  Showcasing Cyberhavens AI data protection with a digital event
-                  campaign and magical product experience.
-                </p>
-              </div>
-              <div className="section-content">
-                <div className="empty-block"></div>
-                <p>
-                  Mi a pellentesque proin laoreet risus vulputate quam erat in.
-                  Eget orci ullamcorper ut nunc a eget lacus cum. Ac vivamus
-                  viverra aliquam duis eu lectus dapibus pulvinar vitae.
-                  Pellentesque auctor odio quis venenatis feugiat blandit
-                  tortor. Integer purus amet elit odio pharetra commodo. Magnis
-                  pharetra odio volutpat.
-                  <br />
-                  Mi a pellentesque proin laoreet risus vulputate quam erat in.
-                  Eget orci ullamcorper ut nunc a eget lacus cum. Ac vivamus
-                  viverra aliquam duis eu lectus dapibus pulvinar vitae.
-                  Pellentesque auctor odio quis venenatis feugiat blandit
-                  tortor. Integer purus amet elit odio pharetra commodo. Magnis
-                  pharetra odio volutpat. <br />
-                  Mi a pellentesque proin laoreet risus vulputate quam erat in.
-                  Eget orci ullamcorper ut nunc a eget lacus cum. Ac vivamus
-                  viverra aliquam duis eu lectus dapibus pulvinar vitae.
-                  Pellentesque auctor odio quis venenatis feugiat blandit
-                  tortor. Integer purus amet elit odio pharetra commodo. Magnis
-                  pharetra odio volutpat.
-                </p>
-              </div>
-            </div>
-            <div className="img-wrapper">
-              <img src={PlaceHolderImg} alt="" />
-            </div>
-          </section> */}
         </div>
         <CallToAction />
         <Footer></Footer>
