@@ -3,6 +3,7 @@
 
 .tag-wrapper{
   display: flex;
+  flex-wrap: wrap;
   gap: .5rem;
 }
 
@@ -60,6 +61,31 @@
 
 .title-wrapper{
   margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 960px){
+  .project-thumbnail{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-thumbnail.featured .project-thumbnail__content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  
+  }
+
+}
+
+@media screen and (max-width: 460px){
+  .project-thumbnail__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+
 }
 
 

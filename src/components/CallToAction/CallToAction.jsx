@@ -9,14 +9,16 @@ function CallToAction() {
         <div className="divider divider-white"></div>
         <div className="btn-wrapper">
           <div className="btn-pair">
-            <Button variant="outline-white">jasin.tairaidrissi@gmail.com</Button>
+            <Button variant="outline-white">
+              jasin.tairaidrissi@gmail.com
+            </Button>
             <Button variant="outline-white">+31 (0)6 46 237 292</Button>
           </div>
-          <Button
-          variant="white-orange"
-          hasArrow={true}
-          href="/Contact" 
-          >Get in Touch</Button>
+          <div className="btn-pair">
+            <Button variant="white-orange" hasArrow={true} href="/Contact">
+              Get in Touch
+            </Button>
+          </div>
         </div>
       </div>
     </div>

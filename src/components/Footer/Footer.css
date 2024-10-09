@@ -1,5 +1,12 @@
-.Footer-nav{
+.footer{
   background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.Footer-nav{ 
   color: var(--color-white);
   padding: 2.5rem;
   width: 100%;

@@ -10,6 +10,7 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: .5rem;
   border-radius: 100px;
   cursor: pointer;
@@ -89,6 +90,13 @@
   --btn-text-color: var(--color-black);
   --btn-border-color: var(--color-btn-border);
   border: 1px solid var(--btn-border-color);
+}
+
+@media screen and (max-width: 460px){
+  .btn{
+    width: 100%;
+    max-width: 70%;
+  }
 }
 
 
