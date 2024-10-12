@@ -33,7 +33,7 @@ function Contact() {
             <section className="grid-two-column">
               <div className="grid-child">
                 <h1>Contact</h1>
-                <div className="button-wrapper">
+                <div className="button-wrapper column">
                   <Button variant="outline" type="button" hasArrow={false}>
                     jasin.tairaidrissi@gmail.com
                   </Button>
@@ -77,7 +77,7 @@ function Contact() {
                           onChange={handleChange}
                         ></textarea>
                       </label>
-                      <div className="btn-wrapper">
+                      <div className="button-wrapper">
                         <Button text="Submit" type="submit" variant="white">
                           Submit
                         </Button>

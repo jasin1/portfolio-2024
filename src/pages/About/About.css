@@ -20,3 +20,14 @@
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 960px){
+  .about-content-wrapper{
+    grid-template-columns: 1fr;
+  }
+
+  .about-img-wrapper{
+    width: 200px;
+  }
+}
+
+

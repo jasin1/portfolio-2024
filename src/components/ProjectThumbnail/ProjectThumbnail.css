@@ -67,14 +67,19 @@
   .project-thumbnail{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: .5rem;
+    margin-bottom: 4rem;
   }
 
   .project-thumbnail.featured .project-thumbnail__content{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
   
+  }
+
+  .project-thumbnail.featured{
+    gap: 1rem;
   }
 
 }
