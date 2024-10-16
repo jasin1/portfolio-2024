@@ -86,11 +86,7 @@ section{
   margin-bottom: 7.5rem;
 }
 
-nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-heading);
@@ -144,10 +140,7 @@ p, li, span, div, a {
   text-wrap: pretty;
 }
 
-ul{
-  display: flex;
-  align-items: center;
-}
+
 
 li{
   list-style: none;

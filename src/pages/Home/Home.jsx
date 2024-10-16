@@ -6,22 +6,17 @@ import Footer from "../../components/Footer/Footer.jsx";
 import CallToAction from "../../components/CallToAction/CallToAction.jsx";
 // import placeHolderImg from "../../assets/placeHolderImg.jpg";
 import projectsData from "../../data/projects.json";
-import {getImagePath} from "../../helpers/imageHelpers.js";
+import { getImagePath } from "../../helpers/imageHelpers.js";
 
 function Home() {
-
-  
-
   const featuredProjects = projectsData.filter((project) => project.isFeatured);
   const normalProjects = projectsData.filter((project) => !project.isFeatured);
-
 
   return (
     <main>
       <article>
         <div className="container">
-          <Header />
-
+      <Header />
           {/* Hero section */}
           <section className="hero">
             <h1>
@@ -30,41 +25,49 @@ function Home() {
               <span className="Header-span">Designing Experiences</span>
             </h1>
             <p className="Header-sub">
-              I am a frontend developer who leverages design expertise to create seamless, user-friendly web experiences.
+              I am a frontend developer who leverages design expertise to create
+              seamless, user-friendly web experiences.
             </p>
-            <Button variant="black" type="button" hasArrow={true} href="/Contact">
+            <Button
+              variant="black"
+              type="button"
+              hasArrow={true}
+              href="/Contact"
+            >
               Let&apos;s Talk
             </Button>
           </section>
 
-           {/* Featured work */}
+          {/* Featured work */}
 
           <section>
             <div className="indication-wrapper">
               <h6>Featured work</h6>
             </div>
-            {featuredProjects.map((project)=>(
-              <ThumbNail 
-              key={project.slug}
-              image={getImagePath(project.thumbnail)}
-              title={project.title}
-              description={project.description}
-              buttons={[
-                {
-                  text:"View Details",
-                  variant:"white",
-                  href:`/projects/${project.slug}`,
-                  linkType: "internal"
-                },
-                project.githubURL ? {
-                  text: "GitHub",
-                  variant: "white",
-                  href: project.githubURL,
-                  linkType: "external"
-                } : null,           
-              ].filter(Boolean)}
-              isFeatured={project.isFeatured}
-              tags={project.tags}
+            {featuredProjects.map((project) => (
+              <ThumbNail
+                key={project.slug}
+                image={getImagePath(project.thumbnail)}
+                title={project.title}
+                description={project.description}
+                buttons={[
+                  {
+                    text: "View Details",
+                    variant: "white",
+                    href: `/projects/${project.slug}`,
+                    linkType: "internal",
+                  },
+                  project.githubURL
+                    ? {
+                        text: "GitHub",
+                        variant: "white",
+                        href: project.githubURL,
+                        linkType: "external",
+                      }
+                    : null,
+                ].filter(Boolean)}
+                isFeatured={project.isFeatured}
+                tags={project.tags}
               />
             ))}
           </section>
@@ -80,7 +83,12 @@ function Home() {
                   around the world
                 </p>
                 <div className="button-wrapper">
-                  <Button variant="white" type="button" hasArrow={true} href="/About">
+                  <Button
+                    variant="white"
+                    type="button"
+                    hasArrow={true}
+                    href="/About"
+                  >
                     Read More
                   </Button>
                 </div>
@@ -91,22 +99,22 @@ function Home() {
             <div className="indication-wrapper">
               <h6>Selected work</h6>
             </div>
-            {normalProjects.map((project)=>(
-              <ThumbNail 
-              key={project.slug}
-              image={getImagePath(project.thumbnail)}
-              title={project.title}
-              description={project.description}
-              buttons={[
-                {
-                  text:"View Details",
-                  variant:"white",
-                  href:`/projects/${project.slug}`,
-                  linkType: "internal"
-                }         
-              ].filter(Boolean)}
-              isFeatured={project.isFeatured}
-              tags={project.tags}
+            {normalProjects.map((project) => (
+              <ThumbNail
+                key={project.slug}
+                image={getImagePath(project.thumbnail)}
+                title={project.title}
+                description={project.description}
+                buttons={[
+                  {
+                    text: "View Details",
+                    variant: "white",
+                    href: `/projects/${project.slug}`,
+                    linkType: "internal",
+                  },
+                ].filter(Boolean)}
+                isFeatured={project.isFeatured}
+                tags={project.tags}
               />
             ))}
           </section>

@@ -1,7 +1,7 @@
 import "./Button.css";
 import { Link } from "react-router-dom";
 
-function Button({ children, onClick, type, variant, hasArrow, href }) {
+function Button({ children, onClick, type, variant, hasArrow, href, icon}) {
 
   const isExternal = href && href.startsWith("http");
   const Component = isExternal ? "a" : href ? Link : "button";
@@ -14,7 +14,7 @@ function Button({ children, onClick, type, variant, hasArrow, href }) {
     type={!isExternal ? type :undefined} 
     target={isExternal ? '_blank': undefined}
     rel={isExternal ? "noopener noreferrer" : undefined}
-    
+    icon={icon}   
     >
       {children}
       {hasArrow && (

@@ -78,7 +78,7 @@ function About() {
                 <Button variant="white" type="button" hasArrow={true}>
                   Curriculum Vitae
                 </Button>
-                <Button variant="white" type="button" hasArrow={true}>
+                <Button variant="white" type="button" hasArrow={true} href="https://www.linkedin.com/in/jasin-tairaidrissi-a807353/">
                   LinkedIn
                 </Button>
               </div>

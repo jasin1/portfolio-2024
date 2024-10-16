@@ -1,0 +1,34 @@
+.close-button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.circle-background{
+  background-color: #716D6D;
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button svg{
+  width: 18px;
+  height: 18px;
+  fill: var(--color-white);
+}
+
+@media screen and (max-width: 768px){
+
+  .close-button {
+    background:none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 100; /* Ensure it appears above other elements */
+    color: white; /* Ensure it's visible on a dark background */
+  }
+}

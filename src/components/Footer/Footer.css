@@ -10,11 +10,38 @@
   color: var(--color-white);
   padding: 2.5rem;
   width: 100%;
-  max-width: 1440px;
+  background-color: var(--color-black);
+  /* max-width: 1440px; */
 }
+
 
 .Footer-nav p{
   font-size: 24px;
   font-weight: var(--font-weight-medium);
   text-transform: uppercase;
+}
+
+.nav-links-footer{
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+@media screen and (max-width: 960px){
+  .Footer-nav{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    max-width: 100%;
+  }
+
+  .nav-link-footer{
+    font-size: var(--font-size-big);
+    color: var(--color-white);
+    margin-bottom: 1rem;
+  }
+
+  .nav-link-footer-logo{
+    margin-bottom: 2rem;
+  }
 }
