@@ -11,6 +11,7 @@ import { getImagePath } from "../../helpers/imageHelpers.js";
 import TextBlock from "../../components/TextBlock/TextBlock.jsx";
 import ImageBlock from "../../components/ImageBlock/ImageBlock.jsx";
 import QuoteBlock from "../../components/QuoteBlock/QuoteBlock.jsx";
+import headingBlock from "../../components/headingBlock/headingBlock.jsx";
 
 function ProjectDetail() {
   const { slug } = useParams();
@@ -24,6 +25,7 @@ function ProjectDetail() {
     text: TextBlock,
     quote: QuoteBlock,
     images: ImageBlock,
+    heading: headingBlock,
   };
 
   return (
@@ -33,6 +35,9 @@ function ProjectDetail() {
           <Header />
           <section className="hero-secondPage">
             <h1>{project.title}</h1>
+            {project.noteText && (
+              <p className="note-text">{project.noteText}</p>
+            )}
             <div className="sub-container">
               <div className="tag-wrapper">
                 {project.tags.map((tag, index) => (
@@ -50,7 +55,7 @@ function ProjectDetail() {
             </div>
           </section>
           <section>
-            <div className="img-wrapper">
+            <div className="img-wrapper img-main">
               <img src={getImagePath(project.thumbnail)} alt="" />
             </div>
             <div className="content-wrapper">
@@ -59,7 +64,7 @@ function ProjectDetail() {
                 return (
                   <div key={index} className="content-block">
                     {BlockComponent && (
-                      <BlockComponent content={block.content} />
+                      <BlockComponent {...(block.type === 'heading' ? { level: block.level, headingText: block.headingText } : { content: block.content })} />
                     )}
                   </div>
                 );

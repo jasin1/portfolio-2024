@@ -1,5 +1,5 @@
 .content-block{
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
 }
 
 .empty-block{
@@ -8,5 +8,13 @@
 
 
 
+.img-main{
+  height: 600px;
+  max-height: 600px;
+  display: flex;
+}
 
+.img-main img{
+  object-fit: cover;
+}
 

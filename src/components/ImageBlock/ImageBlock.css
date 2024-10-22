@@ -8,6 +8,22 @@
   grid-template-columns: 1fr;
 }
 
+/* .thumb-img-wrapper{
+  height: 400px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.thumb-img-wrapper img {
+  object-fit: cover; 
+  height: 100%;
+  width: 100%;
+} */
+
+
+
 .image-pair{
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;

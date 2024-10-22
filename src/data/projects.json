@@ -2,12 +2,13 @@
   {
     "slug": "garden-genius",
     "title": "Garden Genius",
-    "description": "A description for this project",
+    "description": "Garden Genius is a React-based web app designed to help beginner gardeners manage and organize their plant care. Users can search for plants, save favorites, and access detailed information, with future plans to include note-taking and garden tracking features.",
+    "noteText":"**This is an ongoing project. I'm actively adding new features and improving functionality. Stay tuned for updates!",
     "subText": "Sub text for this project meant for the project page",
     "isFeatured": true,
     "projectType": "detailed",
     "tags": ["React", "Design", "Branding", "UI/UX"],
-    "thumbnail": "placeholderImg.jpg",
+    "thumbnail": "/gardengenius/splash-4.jpg",
     "linkProjectPage": "projects/project-title",
     "githubURL": "https://github.com/jasin1/novi-eindopdracht-gardenGenius",
     "liveSiteURL": "",
@@ -15,8 +16,46 @@
     "date": "Juli 2024",
     "contentBlock": [
       {
+        "type": "heading",
+        "level": 2,
+        "headingText": "The challenge"
+      },
+      {
+        "type": "text",
+        "content": "Many beginner gardeners find themselves overwhelmed by the vast amount of information available about plants and gardening. With countless resources and advice, it can be challenging to discern which plants are suitable for their specific location and current season. This complexity can lead to frustration and a lack of confidence in their gardening abilities. Additionally, the absence of a centralized platform for tracking personal experiences, plant care tips, and progress can hinder their growth and enjoyment in this new hobby."
+      },
+
+      {
+        "type": "images",
+        "content": [
+          {
+            "src": "placeholderImg.jpg",
+            "alt": "Image description"
+          },
+          {
+            "src": "placeholderImg.jpg",
+            "alt": "Image description"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "headingText": "The Solution I Built"
+      },
+      
+      {
+        "type": "images",
+        "content": [
+          {
+            "src": "/gardengenius/laptop-mockup-GG.jpg",
+            "alt": "Image description"
+          }
+        ]
+      },
+      {
         "type": "quote",
-        "content": "This is a text block explaining my Garden-Genius project."
+        "content": "Building a tool to nurture nature, it simplifies the complexity of gardening"
       },
       {
         "type": "text",
@@ -34,6 +73,24 @@
             "alt": "Image description"
           }
         ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "headingText": "The Journey"
+      },
+      {
+        "type": "text",
+        "content": "This is a text block explaining my Garden-Genius project."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "headingText": "Current Features & Future Growth"
+      },
+      {
+        "type": "text",
+        "content": "This is a text block explaining my Garden-Genius project."
       }
     ]
   },
@@ -45,7 +102,7 @@
     "isFeatured": false,
     "projectType": "normal",
     "tags": ["Webflow", "Design"],
-    "thumbnail": "placeholderImg.jpg",
+    "thumbnail": "/gardengenius/splash.jpg",
     "linkProjectPage": "projects/project-title",
     "githubURL": "",
     "liveSiteURL": "https://www.budlr.nl/",
