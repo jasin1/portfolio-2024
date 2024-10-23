@@ -44,14 +44,29 @@ function ProjectDetail() {
                   <Tag key={index} name={tag}></Tag>
                 ))}
               </div>
-              <Button
+              <div className="buttons-wrapper">
+                {project.buttons &&
+                  project.buttons.map((button, index) => (
+                    <Button
+                      key={index}
+                      variant={button.variant}
+                      type="button"
+                      hasArrow={button.hasArrow}
+                      href={button.href}
+                    >
+                      {button.text}
+                    </Button>
+                  ))}
+              </div>
+
+              {/* <Button
                 variant="white"
                 type="button"
                 hasArrow={true}
                 href={project.githubURL}
               >
                 GitHub repo
-              </Button>
+              </Button> */}
             </div>
           </section>
           <section>
@@ -64,7 +79,14 @@ function ProjectDetail() {
                 return (
                   <div key={index} className="content-block">
                     {BlockComponent && (
-                      <BlockComponent {...(block.type === 'heading' ? { level: block.level, headingText: block.headingText } : { content: block.content })} />
+                      <BlockComponent
+                        {...(block.type === "heading"
+                          ? {
+                              level: block.level,
+                              headingText: block.headingText,
+                            }
+                          : { content: block.content })}
+                      />
                     )}
                   </div>
                 );

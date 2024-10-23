@@ -3,12 +3,12 @@
     "slug": "garden-genius",
     "title": "Garden Genius",
     "description": "Garden Genius is a React-based web app designed to help beginner gardeners manage and organize their plant care. Users can search for plants, save favorites, and access detailed information, with future plans to include note-taking and garden tracking features.",
-    "noteText":"**This is an ongoing project. I'm actively adding new features and improving functionality. Stay tuned for updates!",
+    "noteText": "**This is an ongoing project. I'm actively adding new features and improving functionality. Stay tuned for updates!",
     "subText": "Sub text for this project meant for the project page",
     "isFeatured": true,
     "projectType": "detailed",
     "tags": ["React", "Design", "Branding", "UI/UX"],
-    "thumbnail": "/gardengenius/splash-4.jpg",
+    "thumbnail": "/gardengenius/main-home-4.jpg",
     "linkProjectPage": "projects/project-title",
     "githubURL": "https://github.com/jasin1/novi-eindopdracht-gardenGenius",
     "liveSiteURL": "",
@@ -43,23 +43,28 @@
         "level": 2,
         "headingText": "The Solution I Built"
       },
-      
+
+      {
+        "type": "text",
+        "content": "To address these challenges, I built Garden Genius, a React-based web app that simplifies the gardening experience by allowing users to search for and save their favorite plants. The app integrates with a plant API, providing essential information like plant care, growth conditions, and images. Users can easily 'like' and save plants for future reference, creating their own personalized plant library. While it's an MVP, Garden Genius already streamlines plant care management, making gardening more approachable and fun for beginners."
+      },
       {
         "type": "images",
         "content": [
           {
-            "src": "/gardengenius/laptop-mockup-GG.jpg",
+            "src": "/gardengenius/plant-detail.jpg",
             "alt": "Image description"
           }
         ]
       },
       {
-        "type": "quote",
-        "content": "Building a tool to nurture nature, it simplifies the complexity of gardening"
+        "type": "heading",
+        "level": 2,
+        "headingText": "The Journey"
       },
       {
         "type": "text",
-        "content": "This is a text block explaining my Garden-Genius project."
+        "content": "Building Garden Genius was both a technical and creative challenge. I started by planning the app’s architecture and user flow, ensuring it was simple enough for beginners while scalable for future features. I implemented React hooks like useState for managing dynamic data, useEffect to handle API calls for plant search functionality, and useContext to efficiently pass data across components, such as user-authentication status and saved plants. One of the more complex parts was developing the login and sign-up functionality, which included form validation and user state management. Ensuring data persisted across sessions while maintaining a smooth user experience was essential. Overcoming these technical challenges shaped the app into a responsive and user-friendly tool."
       },
       {
         "type": "images",
@@ -75,13 +80,8 @@
         ]
       },
       {
-        "type": "heading",
-        "level": 2,
-        "headingText": "The Journey"
-      },
-      {
         "type": "text",
-        "content": "This is a text block explaining my Garden-Genius project."
+        "content": "In addition to the technical development, I created a cohesive visual style and logo for Garden Genius. While not a core requirement, the branding helped unify the app’s design and enhance the user experience. Though not the primary focus, it was important for me to complete the project with attention to both form and function."
       },
       {
         "type": "heading",
@@ -90,10 +90,11 @@
       },
       {
         "type": "text",
-        "content": "This is a text block explaining my Garden-Genius project."
+        "content": "Currently, Garden Genius offers a simple yet effective solution to organize plant information. Users can search for plants by name, explore details like growth requirements, and save plants to a personal list. Future updates will expand functionality, including a note-taking feature where users can track plant progress and care tasks. Additionally, I'm planning to introduce a calendar for scheduling gardening activities, notifications for plant care, and even integration with smart gardening devices. As the app grows, Garden Genius aims to become a complete gardening assistant, helping users cultivate beautiful, thriving gardens with ease."
       }
     ]
   },
+
   {
     "slug": "budlr-project",
     "title": "Budlr",
@@ -102,7 +103,7 @@
     "isFeatured": false,
     "projectType": "normal",
     "tags": ["Webflow", "Design"],
-    "thumbnail": "/gardengenius/splash.jpg",
+    "thumbnail": "/budlr/homepage.jpg",
     "linkProjectPage": "projects/project-title",
     "githubURL": "",
     "liveSiteURL": "https://www.budlr.nl/",
@@ -130,8 +131,18 @@
           }
         ]
       }
+    ],
+    "buttons": [
+      {
+        "text": "Live Site",
+        "href": "https://budlr.nl",
+        "linkType": "external",
+        "variant": "white",
+        "hasArrow": true
+      }
     ]
   },
+
   {
     "slug": "bikeshop-west",
     "title": "Bikeshop West",
@@ -140,7 +151,7 @@
     "isFeatured": false,
     "projectType": "normal",
     "tags": ["Webflow", "Javascript", "Design"],
-    "thumbnail": "placeholderImg.jpg",
+    "thumbnail": "/bikeshop/homepage.jpg",
     "linkProjectPage": "projects/project-title",
     "githubURL": "",
     "liveSiteURL": "https://www.bikeshopwest.nl/",
@@ -167,6 +178,63 @@
             "alt": "Image description"
           }
         ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Live Site",
+        "href": "https://www.bikeshopwest.nl/",
+        "linkType": "external",
+        "variant": "white",
+        "hasArrow": true
+      }
+    ]
+  },
+
+  {
+    "slug": "mijn-kinderopvang",
+    "title": "Mijn kinderopvang",
+    "description": "A description for this project",
+    "subText": "Sub text for this project meant for the project page",
+    "isFeatured": false,
+    "projectType": "normal",
+    "tags": ["Webflow", "Javascript", "Design"],
+    "thumbnail": "/opvang/homepage.jpg",
+    "linkProjectPage": "projects/project-title",
+    "githubURL": "",
+    "liveSiteURL": "https://www.mijn-kinderopvang.nl/",
+    "role": "Frontend Developer",
+    "date": "Juli 2024",
+    "contentBlock": [
+      {
+        "type": "quote",
+        "content": "This is a text block explaining my BikeShop project."
+      },
+      {
+        "type": "text",
+        "content": "This is a text block explaining my BikeShop project."
+      },
+      {
+        "type": "images",
+        "content": [
+          {
+            "src": "placeholderImg.jpg",
+            "alt": "Image description"
+          },
+          {
+            "src": "placeholderImg.jpg",
+            "alt": "Image description"
+          }
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Live Site",
+        "href": "https://www.mijn-kinderopvang.nl/",
+        "linkType": "external",
+        "variant": "white",
+        "hasArrow": true
       }
     ]
   }
