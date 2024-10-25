@@ -20,6 +20,17 @@
   margin-bottom: 1.5rem;
 }
 
+ul.skills-list{
+  list-style: disc;
+  margin-left: 20px; 
+}
+
+ul.skills-list li {
+  list-style: disc;
+  display: list-item;
+  margin-bottom: 1rem; /* or your preferred style */
+}
+
 @media screen and (max-width: 960px){
   .about-content-wrapper{
     grid-template-columns: 1fr;

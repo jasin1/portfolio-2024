@@ -59,14 +59,6 @@ function ProjectDetail() {
                   ))}
               </div>
 
-              {/* <Button
-                variant="white"
-                type="button"
-                hasArrow={true}
-                href={project.githubURL}
-              >
-                GitHub repo
-              </Button> */}
             </div>
           </section>
           <section>

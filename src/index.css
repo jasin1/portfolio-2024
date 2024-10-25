@@ -64,6 +64,7 @@ img.global-img {
   background-repeat: no-repeat;
   background-size: cover;
   shape-margin: 0.75rem;
+  border: none;
 }
 
 html, body {
@@ -81,9 +82,7 @@ html, body {
   background-color: var(--color-background); 
 }
 
-/* article{
-  padding: 0 40px;
-} */
+
 
 section{
   margin-bottom: 7.5rem;
@@ -144,6 +143,12 @@ p, li, span, div, a {
   
 }
 
+p a{
+  font-weight: var(--font-weight-medium);
+  color: var(--color-highlight);
+  text-decoration: none;
+}
+
 .note-text{
   font-size: var(--font-size-small);
   font-style: italic;
@@ -151,6 +156,10 @@ p, li, span, div, a {
   margin-bottom: .5rem;
 }
 
+
+.small-margin-bottom{
+  margin-bottom: 1.5rem;
+}
 
 
 li{
@@ -242,6 +251,12 @@ li{
   margin-bottom: 1.5rem;
   /* aspect-ratio: 16 /9; */
   display: flex;
+  border:none;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  overflow: hidden;
 }
 
 .img-wrapper img{
@@ -249,6 +264,12 @@ li{
   height: auto;
   display: block;
   object-fit: cover;
+  border:none;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  transform: scale(1.001);
+  box-shadow: none;
 }
 
 @media screen and (max-width: 960px){
@@ -266,8 +287,13 @@ li{
   }
 
   .img-wrapper{
+    border-radius: 1rem;
     margin-bottom: 1rem;
+    border:none;
+    border-bottom: none;
   }
+ 
+
 
 }
 
@@ -293,5 +319,10 @@ li{
   .btn{
     width: 100%;
     max-width: 100%;
+  }
+
+  .img-wrapper{
+    border-radius: .8rem;
+    margin-bottom: 1rem;
   }
 }

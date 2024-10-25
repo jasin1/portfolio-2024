@@ -22,44 +22,66 @@ function About() {
               <div className="about-txt-container">
                 <div className="about-txt">
                   <p>
-                    Mi a pellentesque proin laoreet risus vulputate quam erat
-                    in. Eget orci ullamcorper ut nunc a eget lacus cum. Ac
-                    vivamus viverra aliquam duis eu lectus dapibus pulvinar
-                    vitae. Pellentesque auctor odio quis venenatis feugiat
-                    blandit tortor. Integer purus amet elit odio pharetra
-                    commodo. Magnis pharetra odio volutpat. Mi a pellentesque
-                    proin laoreet risus vulputate quam erat in. Eget orci
-                    ullamcorper ut nunc a eget lacus cum. Ac vivamus viverra
-                    aliquam duis eu lectus dapibus pulvinar vitae. <br />
-                    Pellentesque auctor odio quis venenatis feugiat blandit
-                    tortor. Integer purus amet elit odio pharetra commodo.
-                    Magnis pharetra odio volutpat . Mi a pellentesque proin
-                    laoreet risus vulputate quam erat in. Eget orci ullamcorper
-                    ut nunc a eget lacus cum. Ac vivamus viverra aliquam duis eu
-                    lectus dapibus pulvinar vitae. Pellentesque auctor odio quis
-                    venenatis feugiat blandit tortor. Integer purus amet elit
-                    odio pharetra commodo. Magnis pharetra odio volutpat .
+                    I&apos;m a Frontend Developer and Designer based in
+                    Amsterdam, with over 15 years of experience in creating
+                    visually appealing and user-friendly digital solutions.
+                    Recently, I transitioned my focus to frontend development,
+                    specializing in React after successfully completing a
+                    bootcamp at{" "}
+                    <a
+                      href="https://www.novi.nl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Hogeschool NOVI
+                    </a>{" "}
+                    in Utrecht. My extensive background in UI/UX design allows
+                    me to bridge the gap between design and development,
+                    ensuring that both functionality and aesthetics are
+                    seamlessly integrated.
+                  </p>
+
+                  <p>
+                    Throughout my career, I&apos;ve worked on a variety of
+                    projects, collaborating effectively within teams to deliver
+                    high-quality digital products. I am dedicated to continuous
+                    learning and personal growth, always striving to create the
+                    best possible solutions. I&apos;m open to new challenges and
+                    collaborations, so feel free to reach out if you&apos;re
+                    looking for a passionate developer with a keen eye for
+                    design.
                   </p>
                 </div>
                 <div className="about-txt">
                   <h2>My Skills</h2>
-                  <p>
-                    Mi a pellentesque proin laoreet risus vulputate quam erat
-                    in. Eget orci ullamcorper ut nunc a eget lacus cum. Ac
-                    vivamus viverra aliquam duis eu lectus dapibus pulvinar
-                    vitae. Pellentesque auctor odio quis venenatis feugiat
-                    blandit tortor. Integer purus amet elit odio pharetra
-                    commodo. Magnis pharetra odio volutpat. Mi a pellentesque
-                    proin laoreet risus vulputate quam erat in. Eget orci
-                    ullamcorper ut nunc a eget lacus cum. Ac vivamus viverra
-                    aliquam duis eu lectus dapibus pulvinar vitae. Pellentesque
-                    auctor odio quis venenatis feugiat blandit tortor. Integer
-                    purus amet elit odio pharetra commodo. Magnis pharetra odio
-                    volutpat . Mi a pellentesque proin laoreet risus vulputate
-                    quam erat in. Eget orci ullamcorper ut nunc a eget lacus
-                    cum. Ac vivamus viverra aliquam duis eu lectus dapibus
-                    pulvinar
+                  <p className="small-margin-bottom">
+                    I possess a diverse set of skills that enable me to create
+                    engaging and user-friendly digital experiences:
                   </p>
+
+                  <ul className="skills-list">
+                    <li>
+                      <strong>Frontend Development:</strong> Proficient in{" "}
+                      <strong>React</strong>, <strong>JavaScript</strong>,{" "}
+                      <strong>HTML</strong>, and <strong>CSS</strong>.
+                    </li>
+                    <li>
+                      <strong>UI/UX Design:</strong> Extensive experience in
+                      designing intuitive interfaces.
+                    </li>
+                    <li>
+                      <strong>Collaboration:</strong> Proven ability to work
+                      effectively within cross-functional teams.
+                    </li>
+                    <li>
+                      <strong>Continuous Learning:</strong> Committed to staying
+                      current with industry trends and technologies.
+                    </li>
+                    <li>
+                      <strong>Problem Solving:</strong> Strong analytical skills
+                      with a knack for identifying challenges.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -68,17 +90,28 @@ function About() {
             <div className="resources">
               <div className="about-txt">
                 <h2>Additional Resources</h2>
-                <p>
+                {/* <p>
                   Mi a pellentesque proin laoreet risus vulputate quam erat in.
                   Eget orci ullamcorper ut nunc a eget lacus cum. Ac vivamus
                   viverra aliquam.
-                </p>
+                </p> */}
               </div>
               <div className="button-wrapper">
-                <Button variant="white" type="button" hasArrow={true}>
+                <Button
+                  variant="white"
+                  type="button"
+                  hasArrow={true}
+                  href="/assets/cv.pdf"
+                  download="Jasin-Tairaidrissi-CV.pdf"
+                >
                   Curriculum Vitae
                 </Button>
-                <Button variant="white" type="button" hasArrow={true} href="https://www.linkedin.com/in/jasin-tairaidrissi-a807353/">
+                <Button
+                  variant="white"
+                  type="button"
+                  hasArrow={true}
+                  href="https://www.linkedin.com/in/jasin-tairaidrissi-a807353/"
+                >
                   LinkedIn
                 </Button>
               </div>

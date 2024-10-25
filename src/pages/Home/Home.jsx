@@ -76,11 +76,8 @@ function Home() {
               <h2>About Me</h2>
               <div className="content-wrapper-small">
                 <p className="Header-sub">
-                  As a digital designer and art director I help companies and
-                  organisations around the world connect with their audience and
-                  grow their business. Projects can be done directly with
-                  clients or in a supporting role for agencies and studios from
-                  around the world
+                I&apos;m a Frontend Developer and Designer based in Amsterdam, with over 15 years of experience in crafting user-friendly digital solutions. My expertise lies in merging aesthetics with functionality, and I&apos;m passionate about delivering projects that meet both user needs and business goals. Whether you&apos;re looking for a collaborator on your next project or seeking to enhance your team&apos;s capabilities, I&apos;m eager to connect and explore new opportunities!<br/>
+                Curious to learn more about my journey and skills?
                 </p>
                 <div className="button-wrapper">
                   <Button

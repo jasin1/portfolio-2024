@@ -18,3 +18,11 @@
   object-fit: cover;
 }
 
+
+@media screen and (max-width: 960px) {
+  .img-main{
+    height: auto;
+    max-height: 600px;
+  }
+
+}

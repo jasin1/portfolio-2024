@@ -6,6 +6,8 @@ import Footer from "../../components/Footer/Footer.jsx";
 
 
 function Contact() {
+  const email = "jasin.tairaidrissi@gmail.com";
+  const phone = "+31646327292";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,11 +36,14 @@ function Contact() {
               <div className="grid-child">
                 <h1>Contact</h1>
                 <div className="button-wrapper column">
-                  <Button variant="outline" type="button" hasArrow={false}>
+                  <Button variant="outline" type="button" hasArrow={false} href={`mailto:${email}`}>
                     jasin.tairaidrissi@gmail.com
                   </Button>
-                  <Button variant="outline" type="button" hasArrow={false}>
+                  <Button variant="outline" type="button" hasArrow={false} href={`tel:${phone}`}>
                     +31(0) 6 46 327292
+                  </Button>
+                  <Button variant="outline" type="button" hasArrow={false}  href="https://www.linkedin.com/in/jasin-tairaidrissi-a807353/">
+                    LinkedIn
                   </Button>
                 </div>
               </div>

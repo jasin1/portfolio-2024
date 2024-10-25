@@ -1,52 +1,48 @@
 /* Thumb global styling */
 
-
-.tag-wrapper{
+.tag-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
-.project-thumbnail{
+.project-thumbnail {
   margin-bottom: 1.5rem;
 }
 
-.project-thumbnail__image{
+.project-thumbnail__image {
   max-width: 100%;
 }
 
-.project-thumbnail__description{
+.project-thumbnail__description {
   margin-bottom: 1.5rem;
 }
 
-.project-thumbnail__buttons{
+.project-thumbnail__buttons {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 /* Featured thumbnail styling */
 
-.project-thumbnail.featured{
+.project-thumbnail.featured {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
 
-.project-thumbnail.featured{
+.project-thumbnail.featured {
   flex-direction: column;
 }
 
-
-.project-thumbnail.featured .project-thumbnail__image{
+.project-thumbnail.featured .project-thumbnail__image {
   width: 100%;
 }
 
-
-.project-thumbnail.featured .project-thumbnail__content{
+.project-thumbnail.featured .project-thumbnail__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-
 }
 
 .project-thumbnail.featured .img-wrapper {
@@ -57,7 +53,7 @@
 
 .project-thumbnail.featured .project-thumbnail__image {
   object-fit: cover;
-  height: 100%; 
+  height: 100%;
   width: 100%;
 }
 
@@ -65,44 +61,46 @@
 
 /* Other thumbs */
 
-.project-thumbnail{
+.project-thumbnail {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
-.title-wrapper{
+.title-wrapper {
   margin-bottom: 1.5rem;
 }
 
-@media screen and (max-width: 960px){
-  .project-thumbnail{
+@media screen and (max-width: 960px) {
+  .project-thumbnail {
     display: grid;
     grid-template-columns: 1fr;
-    gap: .5rem;
+    gap: 0.5rem;
     margin-bottom: 4rem;
   }
 
-  .project-thumbnail.featured .project-thumbnail__content{
+  .project-thumbnail.featured .project-thumbnail__content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-  
   }
 
-  .project-thumbnail.featured{
+  .project-thumbnail.featured {
     gap: 1rem;
   }
 
+  .project-thumbnail.featured .img-wrapper {
+    height: auto;
+    max-height: 600px;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
-@media screen and (max-width: 460px){
-  .project-thumbnail__buttons{
+@media screen and (max-width: 460px) {
+  .project-thumbnail__buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: .5rem;
+    gap: 0.5rem;
   }
-
 }
-
-

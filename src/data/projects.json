@@ -29,11 +29,11 @@
         "type": "images",
         "content": [
           {
-            "src": "placeholderImg.jpg",
+            "src": "/gardengenius/garden-1.jpg",
             "alt": "Image description"
           },
           {
-            "src": "placeholderImg.jpg",
+            "src": "/gardengenius/garden-2.jpg",
             "alt": "Image description"
           }
         ]
@@ -52,7 +52,25 @@
         "type": "images",
         "content": [
           {
+            "src": "/gardengenius/home-search.jpg",
+            "alt": "Image description"
+          }
+        ]
+      },
+      {
+        "type": "images",
+        "content": [
+          {
             "src": "/gardengenius/plant-detail.jpg",
+            "alt": "Image description"
+          }
+        ]
+      },
+      {
+        "type": "images",
+        "content": [
+          {
+            "src": "/gardengenius/saved-plants.jpg",
             "alt": "Image description"
           }
         ]
@@ -70,11 +88,11 @@
         "type": "images",
         "content": [
           {
-            "src": "placeholderImg.jpg",
+            "src": "/gardengenius/figma-screenshot.jpg",
             "alt": "Image description"
           },
           {
-            "src": "placeholderImg.jpg",
+            "src": "/gardengenius/code-base-2.jpg",
             "alt": "Image description"
           }
         ]
@@ -98,11 +116,11 @@
   {
     "slug": "budlr-project",
     "title": "Budlr",
-    "description": "A description for this project",
+    "description": "Implemented Budlr's web design in Webflow, translating their vision into a seamless online experience. Contributed to the design process to ensure consistency and clarity, supporting their mission to reduce financial stress through innovative digital tools.",
     "subText": "Sub text for this project meant for the project page",
     "isFeatured": false,
     "projectType": "normal",
-    "tags": ["Webflow", "Design"],
+    "tags": ["Webflow"],
     "thumbnail": "/budlr/homepage.jpg",
     "linkProjectPage": "projects/project-title",
     "githubURL": "",
@@ -110,23 +128,39 @@
     "role": "Frontend Developer",
     "date": "Juli 2024",
     "contentBlock": [
+
       {
-        "type": "quote",
-        "content": "This is a text block explaining my Budlr project."
+        "type": "heading",
+        "level": 2,
+        "headingText": "About Budlr"
       },
       {
         "type": "text",
-        "content": "This is a text block explaining my Budlr project."
+        "content": "Budlr is a social enterprise founded in 2018 to tackle financial stress and vulnerability through technology and innovative services. With a mission to help employees and households gain control over their finances, Budlr focuses on improving financial well-being by offering digital tools and advisory services to reduce stress, enhance productivity, and prevent debt-related issues."
       },
       {
         "type": "images",
         "content": [
           {
-            "src": "placeholderImg.jpg",
+            "src": "/budlr/screen-2.jpg",
             "alt": "Image description"
-          },
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "headingText": "My Contribution"
+      },
+      {
+        "type": "text",
+        "content": "For this project, I was responsible for implementing Budlr’s web design in Webflow, translating their vision into a seamless online experience. While I followed their design guidelines closely, my background as a designer allowed me to contribute significantly by ensuring the visual elements were applied effectively and consistently. By combining my technical skills with a keen design sense, I played an active role in ensuring that the digital execution reflected Budlr’s brand identity and met their functional needs."
+      },
+      {
+        "type": "images",
+        "content": [
           {
-            "src": "placeholderImg.jpg",
+            "src": "/budlr/screen-5.jpg",
             "alt": "Image description"
           }
         ]
@@ -146,7 +180,7 @@
   {
     "slug": "bikeshop-west",
     "title": "Bikeshop West",
-    "description": "A description for this project",
+    "description": "Designed and developed a custom website in Webflow, including a dynamic bike rental page powered by JavaScript, offering seamless booking and rental management.",
     "subText": "Sub text for this project meant for the project page",
     "isFeatured": false,
     "projectType": "normal",
@@ -158,23 +192,26 @@
     "role": "Frontend Developer",
     "date": "Juli 2024",
     "contentBlock": [
+      
       {
-        "type": "quote",
-        "content": "This is a text block explaining my BikeShop project."
+        "type": "heading",
+        "level": 2,
+        "headingText": "My contribution"
       },
       {
         "type": "text",
-        "content": "This is a text block explaining my BikeShop project."
+        "content": "BikeShop West provides bike repair, maintenance, rentals, and accessories for urban cyclists in Amsterdam. I designed and developed their website in Webflow, focusing on clean, user-friendly navigation to showcase their services. I also built a custom rental page using vanilla JavaScript, where users can easily select bike types, rental durations, pick-up dates, and accessories. The system sends confirmation emails to both the customer and the shop, streamlining the rental process for the business. This project highlights my ability to integrate user experience with functional design, ensuring the website supports both service presentation and rental management."
       },
       {
         "type": "images",
         "content": [
           {
-            "src": "placeholderImg.jpg",
+            "src": "/bikeshop/rad.jpg",
             "alt": "Image description"
           },
+         
           {
-            "src": "placeholderImg.jpg",
+            "src": "/bikeshop/rental-1.jpg",
             "alt": "Image description"
           }
         ]
@@ -194,7 +231,7 @@
   {
     "slug": "mijn-kinderopvang",
     "title": "Mijn kinderopvang",
-    "description": "A description for this project",
+    "description": "Designed and built the website in Webflow, with a JavaScript-based pricing calculator for flexible child care services, helping parents find the perfect care package for their children.",
     "subText": "Sub text for this project meant for the project page",
     "isFeatured": false,
     "projectType": "normal",
@@ -207,22 +244,23 @@
     "date": "Juli 2024",
     "contentBlock": [
       {
-        "type": "quote",
-        "content": "This is a text block explaining my BikeShop project."
+        "type": "heading",
+        "level": 2,
+        "headingText": "The Project"
       },
       {
         "type": "text",
-        "content": "This is a text block explaining my BikeShop project."
+        "content": " 'Mijn Kinderopvang' offers personalized, flexible child care across six locations in Almere, creating a safe, welcoming environment for children. I designed and built their website in Webflow, ensuring the brand's approachable and caring identity was reflected in every aspect of the user experience. I also developed a JavaScript-based pricing calculator that allows parents to select their desired child care options, including after-school and full-day care, and customize the package based on days and times. The calculator automatically generates pricing and emails the selected options to both the parent and the company, streamlining communication and simplifying the service selection process."
       },
       {
         "type": "images",
         "content": [
           {
-            "src": "placeholderImg.jpg",
+            "src": "/opvang/rekentool.jpg",
             "alt": "Image description"
           },
           {
-            "src": "placeholderImg.jpg",
+            "src": "/opvang/section.jpg",
             "alt": "Image description"
           }
         ]

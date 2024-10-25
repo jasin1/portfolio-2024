@@ -13,6 +13,21 @@ function ProjectThumbnail({
 }) {
   const navigate = useNavigate();
 
+  // const renderButtons = (buttons) => {
+  //   return buttons.map((button, index) => (
+  //     <Button
+  //       key={index}
+  //       onClick={button.linkType === "internal" ? () => navigate(button.href) : undefined}
+  //       href={button.linkType === "external" ? button.href : undefined}
+  //       variant={button.variant || "default"}
+  //       type={button.type || "button"}
+  //       hasArrow={button.hasArrow || false} // Ensure 'hasArrow' is controlled
+  //     >
+  //       {button.text}
+  //     </Button>
+  //   ));
+  // };
+
 
   return (
     <div className={`project-thumbnail ${isFeatured ? "featured" : ""}`}>
@@ -44,7 +59,9 @@ function ProjectThumbnail({
               >
                 {button.text}
               </Button>
+              
             ))}
+            {/* {renderButtons(buttons || [])} */}
           </div>
         </div>
       </div>
