@@ -4,7 +4,6 @@ import Button from "../../components/Button/Button.jsx";
 import { useState } from "react";
 import Footer from "../../components/Footer/Footer.jsx";
 
-
 function Contact() {
   const email = "jasin.tairaidrissi@gmail.com";
   const phone = "+31646327292";
@@ -28,15 +27,14 @@ function Contact() {
 
     fetch("/", {
       method: "POST",
-      headers: {"content-Type": "application/x-www-form-urlencoded"},
+      headers: { "content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-    .then(()=>setSubmitted(true))
-    .catch((error) => {
-      console.error("Error submitting form:",error);
-      alert("Error submitting form");
-    });
-
+      .then(() => setSubmitted(true))
+      .catch((error) => {
+        console.error("Error submitting form:", error);
+        alert("Error submitting form");
+      });
   };
 
   return (
@@ -49,48 +47,67 @@ function Contact() {
               <div className="grid-child">
                 <h1>Contact</h1>
                 <div className="button-wrapper column">
-                  <Button variant="outline" type="button" hasArrow={false} href={`mailto:${email}`}>
+                  <Button
+                    variant="outline"
+                    type="button"
+                    hasArrow={false}
+                    href={`mailto:${email}`}
+                  >
                     jasin.tairaidrissi@gmail.com
                   </Button>
-                  <Button variant="outline" type="button" hasArrow={false} href={`tel:${phone}`}>
+                  <Button
+                    variant="outline"
+                    type="button"
+                    hasArrow={false}
+                    href={`tel:${phone}`}
+                  >
                     +31(0) 6 46 327292
                   </Button>
-                  <Button variant="outline" type="button" hasArrow={false}  href="https://www.linkedin.com/in/jasin-tairaidrissi-a807353/">
+                  <Button
+                    variant="outline"
+                    type="button"
+                    hasArrow={false}
+                    href="https://www.linkedin.com/in/jasin-tairaidrissi-a807353/"
+                  >
                     LinkedIn
                   </Button>
                 </div>
               </div>
               <div className="grid-child">
-                <p className="quote">
-                  Let’s work together and make something that matters
-                </p>
                 <div>
                   {submitted ? (
-                     <div className="thank-you-message">
-                     <h2>Thank you for reaching out!</h2>
-                     <p>I&apos;ll get back to you as soon as possible.</p>
-                   </div>
+                    <div className="thank-you-message">
+                      <h5>Thank you for reaching out!</h5>
+                      <p>I&apos;ll get back to you as soon as possible.</p>
+                    </div>
                   ) : (
-                    <form onSubmit={handleSubmit} 
-                    className="contact-form"
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
+                    <form
+                      onSubmit={handleSubmit}
+                      className="contact-form"
+                      name="contact"
+                      method="POST"
+                      data-netlify="true"
+                     
                     >
-                      <input type="hidden" name="form-name" value="contact"/>
-                      <p className="hidden">
-                        <label>Don&apos;t fill this out if you&apos;re human: <input name="bot-field"/></label>
+                      <input type="hidden" name="form-name" value="contact" />
+                      <input
+                        type="hidden"
+                        name="subject"
+                        value="Email from Portfolio website"
+                      />
+            
+                      <p>
+                        <label>
+                          Name
+                          <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                          />
+                        </label>
                       </p>
-                      <label>
-                        Name
-                        <input
-                          type="text"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                        />
-                      </label>
+                      <p></p>
                       <label>
                         Email
                         <input
