@@ -95,7 +95,10 @@ function Contact() {
                         name="subject"
                         value="Email from Portfolio website"
                       />
-            
+
+                      <p className="quote">
+                        Let&apos;s work together and make something that matters
+                      </p>
                       <p>
                         <label>
                           Name
