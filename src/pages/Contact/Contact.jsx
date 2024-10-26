@@ -86,6 +86,7 @@ function Contact() {
                       className="contact-form"
                       name="contact"
                       method="POST"
+                      netlify
                       data-netlify="true"
                      
                     >
