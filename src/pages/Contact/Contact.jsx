@@ -23,12 +23,12 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const formData = new FormData(form);
+    const data = new FormData(form);
 
     fetch("/", {
       method: "POST",
-      headers: { "content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data).toString(),
     })
       .then(() => setSubmitted(true))
       .catch((error) => {
@@ -88,19 +88,20 @@ function Contact() {
                       method="POST"
                       netlify
                       data-netlify="true"
-                     
+                      netlify-honeypot="bot-field" 
                     >
                       <input type="hidden" name="form-name" value="contact" />
+                      
                       <input
                         type="hidden"
                         name="subject"
                         value="Email from Portfolio website"
                       />
+                      <input type="hidden" name="bot-field" />
 
                       <p className="quote">
                         Let&apos;s work together and make something that matters
                       </p>
-                      <p>
                         <label>
                           Name
                           <input
@@ -109,9 +110,7 @@ function Contact() {
                             value={formData.name}
                             onChange={handleChange}
                           />
-                        </label>
-                      </p>
-                      <p></p>
+                        </label>     
                       <label>
                         Email
                         <input
