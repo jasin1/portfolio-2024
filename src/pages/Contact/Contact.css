@@ -16,6 +16,14 @@
   max-width: 400px;
 }
 
+.thank-you-message{
+  background: var(--color-light-grey);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+
+
 .contact-form label{
   display: flex;
   flex-direction: column;

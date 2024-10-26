@@ -272,6 +272,10 @@ li{
   box-shadow: none;
 }
 
+.hidden{
+  display: none;
+}
+
 @media screen and (max-width: 960px){
   section{
     width: 100%;

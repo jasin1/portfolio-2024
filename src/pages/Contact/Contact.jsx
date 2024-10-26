@@ -23,7 +23,20 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: {"content-Type": "application/x-www-form-urlencoded"},
+      body: new URLSearchParams(formData).toString(),
+    })
+    .then(()=>setSubmitted(true))
+    .catch((error) => {
+      console.error("Error submitting form:",error);
+      alert("Error submitting form");
+    });
+
   };
 
   return (
@@ -53,9 +66,22 @@ function Contact() {
                 </p>
                 <div>
                   {submitted ? (
-                    <div>Thank you for your message!</div>
+                     <div className="thank-you-message">
+                     <h2>Thank you for reaching out!</h2>
+                     <p>I&apos;ll get back to you as soon as possible.</p>
+                   </div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="contact-form">
+                    <form onSubmit={handleSubmit} 
+                    className="contact-form"
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    >
+                      <input type="hidden" name="form-name" value="contact"/>
+                      <p className="hidden">
+                        <label>Don&apos;t fill this out if you&apos;re human: <input name="bot-field"/></label>
+                      </p>
                       <label>
                         Name
                         <input
