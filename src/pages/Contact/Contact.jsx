@@ -18,7 +18,7 @@ function Contact() {
         process.env.REACT_APP_SERVICE_ID, // Your service ID from the .env file
         process.env.REACT_APP_TEMPLATE_ID, // Your template ID from the .env file
         form.current,
-        process.env.REACT_APP_PUBLIC_KEY, // Your public key from the .env file
+        { publicKey: process.env.REACT_APP_PUBLIC_KEY }
       )
       .then(
         () => {
