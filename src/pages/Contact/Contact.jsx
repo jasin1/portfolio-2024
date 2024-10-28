@@ -3,6 +3,8 @@ import Header from "../../components/Header/Header.jsx";
 import Button from "../../components/Button/Button.jsx";
 import { useState } from "react";
 import Footer from "../../components/Footer/Footer.jsx";
+import emailjs from 'emailjs-com';
+
 
 function Contact() {
   const email = "jasin.tairaidrissi@gmail.com";
@@ -22,19 +24,25 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data).toString(),
-    })
-      .then(() => setSubmitted(true))
-      .catch((error) => {
-        console.error("Error submitting form:", error);
-        alert("Error submitting form");
-      });
+    emailjs
+    .send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      formData,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
+        console.log('Email successfully sent!', result.text);
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '' }); // Reset form fields
+      },
+      (error) => {
+        console.log('Failed to send email:', error.text);
+      }
+    );
+
   };
 
   return (
@@ -86,9 +94,6 @@ function Contact() {
                       className="contact-form"
                       name="contact"
                       method="POST"
-                      netlify
-                      data-netlify="true"
-                      netlify-honeypot="bot-field" 
                     >
                       <input type="hidden" name="form-name" value="contact" />
                       
