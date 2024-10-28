@@ -24,26 +24,26 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    emailjs
-    .send(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      formData,
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-    )
-    .then(
-      (result) => {
-        console.log('Email successfully sent!', result.text);
-        setSubmitted(true);
-        setFormData({ name: '', email: '', message: '' }); // Reset form fields
-      },
-      (error) => {
-        console.log('Failed to send email:', error.text);
-      }
-    );
-
+  
+    
+    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'default_service';
+    const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const templateParams = {
+      name: formData.name, 
+      email: formData.email, 
+      message: formData.message, 
+    };
+  
+    emailjs.send(serviceID, templateID, templateParams)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setSubmitted(true); // Show thank you message
+      })
+      .catch((error) => {
+        console.log('FAILED...', error);
+      });
   };
+  
 
   return (
     <main>
