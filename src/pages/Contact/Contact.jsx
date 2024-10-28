@@ -1,37 +1,41 @@
 import "./Contact.css";
 import Header from "../../components/Header/Header.jsx";
 import Button from "../../components/Button/Button.jsx";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Footer from "../../components/Footer/Footer.jsx";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 
 function Contact() {
   const form = useRef();
+  const [submitted, setSubmitted] = useState(false);
   const email = "jasin.tairaidrissi@gmail.com";
   const phone = "+31646327292";
+  
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Service ID:", process.env.REACT_APP_SERVICE_ID);
-    console.log("Template ID:", process.env.REACT_APP_TEMPLATE_ID);
-    console.log("Public Key:", process.env.REACT_APP_PUBLIC_KEY);
+    const response = await fetch("https://formspree.io/f/xanyqpza", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: form.current.name.value,
+        email: form.current.email.value,
+        message: form.current.message.value,
+      }),
+    });
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID, // Your service ID from the .env file
-        process.env.REACT_APP_TEMPLATE_ID, // Your template ID from the .env file
-        form.current,
-        { publicKey: process.env.REACT_APP_PUBLIC_KEY }
-      )
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        },
-      );
+    if (response.ok) {
+      setSubmitted(true);
+      console.log("SUCCESS!");
+      form.current.reset(); // Reset the form after successful submission
+    } else {
+      console.error("Form submission failed", response);
+    }
   };
 
   return (
@@ -72,7 +76,8 @@ function Contact() {
               </div>
               <div className="grid-child">
                 <div>
-                    <form
+
+                   {!submitted ? ( <form
                     ref={form}
                       onSubmit={handleSubmit}
                       className="contact-form"
@@ -116,7 +121,12 @@ function Contact() {
                           Submit
                         </Button>
                       </div>
-                    </form>
+                    </form>):(
+                          <div className="thank-you-message">
+                          <h3>Thank you for your message!</h3>
+                          <p>We will get back to you soon.</p>
+                        </div>
+                    )}
                 </div>
               </div>
             </section>
