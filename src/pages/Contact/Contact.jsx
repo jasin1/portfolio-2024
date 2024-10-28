@@ -123,8 +123,8 @@ function Contact() {
                       </div>
                     </form>):(
                           <div className="thank-you-message">
-                          <h3>Thank you for your message!</h3>
-                          <p>We will get back to you soon.</p>
+                          <h5>Thank you for your message!</h5>
+                          <p>I will get back to you soon.</p>
                         </div>
                     )}
                 </div>

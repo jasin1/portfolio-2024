@@ -245,11 +245,10 @@ li{
 }
 
 .img-wrapper{
-  background-color:red;
+  background-color:var(--color-background);
   border-radius: 1.5rem;
   overflow: hidden;
   margin-bottom: 1.5rem;
-  /* aspect-ratio: 16 /9; */
   display: flex;
   border:none;
   border-bottom: none;
@@ -268,7 +267,7 @@ li{
   border-bottom: none;
   padding: 0;
   margin: 0;
-  transform: scale(1.001);
+  /* transform: scale(1.001); */
   box-shadow: none;
 }
 
