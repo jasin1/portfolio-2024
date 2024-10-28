@@ -1,49 +1,34 @@
 import "./Contact.css";
 import Header from "../../components/Header/Header.jsx";
 import Button from "../../components/Button/Button.jsx";
-import { useState } from "react";
+import { useRef } from "react";
 import Footer from "../../components/Footer/Footer.jsx";
-import emailjs from 'emailjs-com';
-
+import emailjs from "emailjs-com";
 
 function Contact() {
+  const form = useRef();
   const email = "jasin.tairaidrissi@gmail.com";
   const phone = "+31646327292";
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    
-    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'default_service';
-    const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-    const templateParams = {
-      name: formData.name, 
-      email: formData.email, 
-      message: formData.message, 
-    };
-  
-    emailjs.send(serviceID, templateID, templateParams)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        setSubmitted(true); // Show thank you message
-      })
-      .catch((error) => {
-        console.log('FAILED...', error);
-      });
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID, // Your service ID from the .env file
+        process.env.REACT_APP_TEMPLATE_ID, // Your template ID from the .env file
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY, // Your public key from the .env file
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        },
+      );
   };
-  
 
   return (
     <main>
@@ -83,20 +68,15 @@ function Contact() {
               </div>
               <div className="grid-child">
                 <div>
-                  {submitted ? (
-                    <div className="thank-you-message">
-                      <h5>Thank you for reaching out!</h5>
-                      <p>I&apos;ll get back to you as soon as possible.</p>
-                    </div>
-                  ) : (
                     <form
+                    ref={form}
                       onSubmit={handleSubmit}
                       className="contact-form"
                       name="contact"
                       method="POST"
                     >
                       <input type="hidden" name="form-name" value="contact" />
-                      
+
                       <input
                         type="hidden"
                         name="subject"
@@ -107,30 +87,24 @@ function Contact() {
                       <p className="quote">
                         Let&apos;s work together and make something that matters
                       </p>
-                        <label>
-                          Name
-                          <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                          />
-                        </label>     
+                      <label>
+                        Name
+                        <input
+                          type="text"
+                          name="name"
+                        />
+                      </label>
                       <label>
                         Email
                         <input
                           type="email"
                           name="email"
-                          value={formData.email}
-                          onChange={handleChange}
                         />
                       </label>
                       <label>
                         Message
                         <textarea
                           name="message"
-                          value={formData.message}
-                          onChange={handleChange}
                         ></textarea>
                       </label>
                       <div className="button-wrapper">
@@ -139,7 +113,6 @@ function Contact() {
                         </Button>
                       </div>
                     </form>
-                  )}
                 </div>
               </div>
             </section>
