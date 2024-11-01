@@ -300,6 +300,14 @@ li{
 
 }
 
+@media (max-width: 616px){
+  .sub-container{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
 
 
 @media (max-width: 440px){
