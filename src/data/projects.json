@@ -110,6 +110,16 @@
         "type": "text",
         "content": "Currently, Garden Genius offers a simple yet effective solution to organize plant information. Users can search for plants by name, explore details like growth requirements, and save plants to a personal list. Future updates will expand functionality, including a note-taking feature where users can track plant progress and care tasks. Additionally, I'm planning to introduce a calendar for scheduling gardening activities, notifications for plant care, and even integration with smart gardening devices. As the app grows, Garden Genius aims to become a complete gardening assistant, helping users cultivate beautiful, thriving gardens with ease."
       }
+    ],
+    
+    "buttons": [
+      {
+        "text": "Github Repo",
+        "href": "https://github.com/jasin1/novi-eindopdracht-gardenGenius",
+        "linkType": "external",
+        "variant": "white",
+        "hasArrow": true
+      }
     ]
   },
 
