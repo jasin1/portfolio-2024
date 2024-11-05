@@ -101,10 +101,10 @@ function About() {
                   variant="white"
                   type="button"
                   hasArrow={true}
-                  href="/assets/cv.pdf"
+                  href="https://jasinidrissi.com/assets/cv.pdf"
                   download="Jasin-Tairaidrissi-CV.pdf"
                 >
-                  Curriculum Vitae
+                  Download My CV
                 </Button>
                 <Button
                   variant="white"

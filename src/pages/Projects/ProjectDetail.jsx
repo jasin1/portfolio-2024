@@ -28,6 +28,7 @@ function ProjectDetail() {
     heading: headingBlock,
   };
 
+
   return (
     <main>
       <article>
@@ -58,7 +59,6 @@ function ProjectDetail() {
                     </Button>
                   ))}
               </div>
-
             </div>
           </section>
           <section>
@@ -66,13 +66,27 @@ function ProjectDetail() {
               <img src={getImagePath(project.thumbnail)} alt="" />
             </div>
             <div className="content-wrapper">
+           
               {project.contentBlock.map((block, index) => {
+                console.log("blockType", block.type);
                 const BlockComponent = componentMap[block.type];
+                const isHeadingBlock = block.type === "heading";
+
+                // Determine if the previous block was a heading
+                const addMarginClass =
+                  index > 0 &&
+                  project.contentBlock[index - 1].type === "heading";
+
                 return (
-                  <div key={index} className="content-block">
+                  <div
+                    key={index}
+                    className={`content-block type-${block.type} ${
+                      addMarginClass ? "margin-large" : ""
+                    }`}
+                  >
                     {BlockComponent && (
                       <BlockComponent
-                        {...(block.type === "heading"
+                        {...(isHeadingBlock
                           ? {
                               level: block.level,
                               headingText: block.headingText,

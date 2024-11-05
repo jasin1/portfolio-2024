@@ -16,7 +16,7 @@ function Home() {
     <main>
       <article>
         <div className="container">
-      <Header />
+          <Header />
           {/* Hero section */}
           <section className="hero">
             <h1>
@@ -28,14 +28,25 @@ function Home() {
               I am a frontend developer who leverages design expertise to create
               seamless, user-friendly web experiences.
             </p>
-            <Button
-              variant="black"
-              type="button"
-              hasArrow={true}
-              href="/Contact"
-            >
-              Let&apos;s Talk
-            </Button>
+            <div className="button-wrapper">
+              <Button
+                variant="black"
+                type="button"
+                hasArrow={true}
+                href="/Contact"
+              >
+                Let&apos;s Talk
+              </Button>
+
+              <Button
+                variant="white"
+                type="button"
+                hasArrow={true}
+                href="https://www.linkedin.com/in/jasin-tairaidrissi-a807353/"
+              >
+                LinkedIn
+              </Button>
+            </div>
           </section>
 
           {/* Featured work */}
@@ -76,7 +87,15 @@ function Home() {
               <h2>About Me</h2>
               <div className="content-wrapper-small">
                 <p className="Header-sub">
-                I&apos;m a Frontend Developer with a strong foundation in design, based in Amsterdam, and backed by over 15 years of experience crafting engaging digital solutions. My journey in design has sharpened my eye for aesthetics and usability, and as I transition into frontend development, I bring a fresh, committed perspective to coding. I&apos;m excited to join a team where I can keep growing as a developer while drawing on my design expertise to build user-focused solutions. Curious about my journey and how my skills could support your team?
+                  I&apos;m a Frontend Developer with a strong foundation in
+                  design, based in Amsterdam, and backed by over 15 years of
+                  experience crafting engaging digital solutions. My journey in
+                  design has sharpened my eye for aesthetics and usability, and
+                  as I transition into frontend development, I bring a fresh,
+                  committed perspective to coding. I&apos;m excited to join a
+                  team where I can keep growing as a developer while drawing on
+                  my design expertise to build user-focused solutions. Curious
+                  about my journey and how my skills could support your team?
                 </p>
                 <div className="button-wrapper">
                   <Button
