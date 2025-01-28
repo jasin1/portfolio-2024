@@ -68,11 +68,11 @@ function Home() {
                     href: `/projects/${project.slug}`,
                     linkType: "internal",
                   },
-                  project.githubURL
+                  project.liveSiteURL
                     ? {
-                        text: "GitHub",
+                        text: "Live Site",
                         variant: "white",
-                        href: project.githubURL,
+                        href: project.liveSiteURL,
                         linkType: "external",
                       }
                     : null,
