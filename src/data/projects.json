@@ -114,8 +114,8 @@
     
     "buttons": [
       {
-        "text": "Github Repo",
-        "href": "https://github.com/jasin1/novi-eindopdracht-gardenGenius",
+        "text": "Live Site",
+        "href": "https://garden-genius.netlify.app/",
         "linkType": "external",
         "variant": "white",
         "hasArrow": true
